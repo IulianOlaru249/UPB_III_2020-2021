@@ -1,0 +1,16 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ghostpants/Documents/facultateAn3/CN2/lab00~2/lab00_skel/task01a.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module task01a
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ghostpants/Documents/facultateAn3/CN2/lab00~2/lab00_skel/task01b.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module task01b
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ghostpants/Documents/facultateAn3/CN2/lab00~2/lab00_skel/task02.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module task02
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ghostpants/Documents/facultateAn3/CN2/lab00~2/lab00_skel/task03.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module task03
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ghostpants/Documents/facultateAn3/CN2/lab00~2/lab00_skel/task01a_test.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module task01a_test
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ghostpants/Documents/facultateAn3/CN2/lab00~2/lab00_skel/task01b_test.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module task01b_test
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ghostpants/Documents/facultateAn3/CN2/lab00~2/lab00_skel/task02_test.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module task02_test
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ghostpants/Documents/facultateAn3/CN2/lab00~2/lab00_skel/task03_test.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module task03_test

@@ -1,0 +1,200 @@
+Logică Digitală
+    1. Porți logice
+        - utile pentru implementarea operațiilor de algebră booleană
+        - formate din tranzistori (și rezistențe, după caz)
+    2. Familii logice = grupări de porți logice:
+        - Wired Logic, RTL, DTL, TTL, ECL, NMOS, CMOS
+    3. "set-and-forget"
+        - construim dispozitive din siliciu (tranzistori) și uităm de siliciu
+        - construim porți logice din tranzistori și uităm de tranzistori
+        - construim circuite integrate din porți logice și uităm de porți logice
+        - construim procesoare din circuite integrate și uităm de electronică
+        - programăm procesoarele în assembly și uităm de assembly
+    4. Circuit logic combinațional = poartă logică care aplică o funcție pe
+  intrări.
+        - multiplexor, sumator, (de)codificator, comparator, memorie ROM
+    5. Circuit logic secvențial = ieșirea depinte atât de intrare, cât și de
+  stările anterioare ale circuitului
+        - asincron (latch) = ieșirea se schimbă în timp real
+        - sincron (bistabil) = ieșirea se schimbă pe frontul crescător (sau 
+                        descrescător) al semnalului de ceas
+
+Verilog = HDL (Hardware Description Language)
+    1. Folosit pentru specificarea formală a circuitelor electronice digitale.
+    2. Conține abstractizări / moduri de a genera porți logice prin cod.
+    3. FPGA = platformă de dezvoltare a unui circuit integrat de la zero.
+            = matrice de porți logice
+    4. Avantajele FPGA față de un procesor
+        - design-ul se poate reconfigura rapid
+        - grad ridicat de paralelism
+        - control fin al timpului (ex. comută semnalul de ceas la fiecare 13ns)
+    5. Modulul = unitatea de bază a limbajului
+        - format din 2 componente: descrierea interfeței
+                                   comportamentul circuitului
+        
+        // Definirea modulului
+        module <nume_modul>(
+            <tip_port_1> <nume_port_1>, 
+            <tip_port_2> <nume_port_2>,
+            ...
+            <tip_port_n> <nume_port_n>
+            ); 
+        
+        // Implementarea modulului.
+        
+        endmodule
+
+        // Instanțierea modulului.
+        // Nu este o eroare să nu legăm toate porturile unui modul!
+        nume_modul <nume_instanta>(
+            .nume_port_1(<nume_argument_1>), 
+            .nume_port_7(<nume_argument_7>), 
+            .nume_port_2(<nume_argument_2>), 
+            ..., 
+            .nume_port_n(<nume_argument_n>)
+        );
+
+    6. Declarații
+        - Fire (wire): reprezintă conexiuni fizice între componente.
+        - Registre (reg): reține o valoare și i se poate atribui o valoare.
+    7. Construcții
+        - Atribuiri continue (assign): pot fi folosite doar pe wire și implică
+      faptul că acest wire este ieșirea unei combinații de porti logice.
+        - Blocuri initial: ne permit să definim o stare inițială. Acest bloc va
+      fi declanșat o singură dată, la inițializarea modulului.
+        - Blocuri always: conțin acțiuni ce vor fi executate periodic.
+    8. Primitive = and, or, nor, nand, xor, xnor
+        - pentru primitivele predefinite numele instanței este opțional
+        - în cazul primitivelor este obligatoriu să declarăm la început
+      semnalele de ieșire, acestea fiind urmate de cele de intrare.
+        - se pot defini UDP-uri (User Defined Primitives), prin intermediul
+      tabelei de adevăr.
+    9. Mediu de dezvoltare
+        - Xilinx ISE = sintetizare cod, simularea cod și programare pe plăci.
+        - un modul Verilog se definește într-un fișier numit: <nume_modul>.v
+        - pentru testarea unui modul se utilizează un modul de test
+      (test fixture) în care se specifică manual valori pentru intrările
+      modulului
+            + directiva timescale = definește unitatea de timp a simulării.
+            | construcția #100; = acestă construcție indică simulatorului să
+                                aștepte 100 de unități de timp.
+    
+Descriere modul Verilog
+    1. Tipuri de descriere
+        - la nivel structural = descrie structura internă a modulului folosind
+      primitive și module.
+        - la nivel de flux de date = descrie relația între intrări și ieșiri
+      sub forma unor expresii.
+        - la nivel procedural = descrie funcționalitatea modulului într-un mod
+      algoritmic.
+    2. Atribuiri
+        - assign (atribuire continuă) = relație directă între semnale
+            + atribuirea se face pe variabilă de tip wire
+            | valoarea atribuită poate fi de tip wire sau reg
+            | nu se poate folosi în blocuri de tip initial sau always
+        - Atribuiri blocante (=) 
+            + se execută secvențial
+            | atribuirea se face doar pe variabilă de tip reg
+            | folosite doar în blocurile procedurale
+        - Atribuiri non-blocante (<=)
+            + se execută în paralel, procesul având doi pași:
+            |   a. Partea dreaptă a tuturor atribuirilor este evaluată.
+            |   b. Valorile determinate la pasul 1 sunt asignate variabilelor
+            |     din partea stângă.
+            | atribuirea se face doar pe variabilă de tip reg
+            | folosite doar în blocurile procedurale
+    3. Blocurile initial și always
+        initial begin
+            // instrucțiuni
+        end
+
+        always @(posedge clk)
+        begin
+            // instrucțiuni
+        end
+
+        - marchează secțiuni de cod procedural ale modulului.
+        - CONTEAZĂ ordinea instrucțiunilor (la structural și flux de date, nu)
+        - @(…) definiște lista de sensizitivitate a blocului always
+    4. Construcții de control = utilizate în secțiunile procedurale de cod
+        // Condiționale
+        if (sig == 0) 
+        begin
+            a = 2;
+        end else begin
+            a = 0;
+        end
+
+        case (sig)
+            1’b0: a = 2;
+            1’b1: a = 1;
+            default: a = 0;
+        endcase
+
+        // Bucle
+        for (i = 0; i < 10; i = i + 1) 
+        begin
+            a = a + 5;
+        end
+
+        i = 0;
+        while (i < 10) 
+        begin
+            a = a + 5;
+            i = i + 1;
+        end
+        
+        repeat (10) 
+        begin
+            a = a + 5;
+        end
+
+        // Sincronizare - întârziere
+        #10 a = a + 1
+
+        // Eveniment: execuția unei instrucțiuni este determinată de apariția
+        // unui eveniment
+        @r begin
+            a = b & c; 
+        end
+
+        // Așteptare
+        wait (a == 3) begin
+            a = b & c;
+        end
+        
+Automate cu stări finite (FSM)
+    1. Un automat finit este un model de calculabilitate folosit pentru
+  proiectarea diverselor programe sau circuite secvenţiale. 
+        - se află, la orice moment de timp, într-una dintr-un număr finit de
+      stări posibile.
+        - poate executa tranziţii între aceste stări.
+        - pot primi intrări şi pot da la ieşire diverse informaţii.
+    2. Automate Mealy = ieşirea depinde de starea curentă şi de intrarea curent.
+    3. Automate Moore = ieșirea este determinat doar de starea în care se află.
+    4. FSM în Verilog (CN1 - Laborator 4)
+        a. Codificarea stărilor
+        b. Precizarea comportamentului ieșirilor
+        c. Logica secvențială de tranziție după ceas
+        d. Logica de schimbare a stărilor - în funcție de starea curentă și de
+      intrări
+
+Unitatea aritmetică logică (UAL) = unitate fundamentală a oricărui procesor
+    1. Responsabilă pentru aproape toate calculele numerice.
+    2. Poate fi proiectată să execute orice operație
+        - operații complexe => cost ridicat și mai multă căldură disipată.
+        - ideal o operație trebuie să fie executată într-un singur ciclu de ceas
+    3. Status Register = fiecare bit din registru semnalează un anumit eveniment
+
+Pipelining
+    1. Fazele execuției unei instrucțiuni
+        - Instruction Fetch: instrucțiunea adusă din memorie în procesor.
+        - Instruction Decode: determină unitățile și datele necesare execuției.
+        - EXecute: execută acțiunea determinată anterior.
+        - Memory Access: accesarea memoriei de date (dacă e nevoie)
+        - register Write Back: scrierea datelor în registre (dacă e nevoie)
+    2. Execuția instrucțiunilor
+        - normal are loc în mod secvențial (o instrucțiune va începe după
+      terminarea ultimului stagiu al instrucțiunii precedente).
+        - execuția instrucțiunilor în pipeline înseamnă că este câte o
+      instrucțiune în fiecare stagiu la orice moment dat.

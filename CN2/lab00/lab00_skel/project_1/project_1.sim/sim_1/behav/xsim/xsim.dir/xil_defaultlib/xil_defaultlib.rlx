@@ -1,0 +1,13 @@
+0.6
+2019.2
+Nov  6 2019
+21:42:20
+/home/ghostpants/Documents/facultateAn3/CN2/lab00~2/lab00_skel/project_1/project_1.sim/sim_1/behav/xsim/glbl.v,1573089660,verilog,,,,glbl,,,,,,,,
+/home/ghostpants/Documents/facultateAn3/CN2/lab00~2/lab00_skel/task01a.v,1602861646,verilog,,/home/ghostpants/Documents/facultateAn3/CN2/lab00~2/lab00_skel/task01b.v,,task01a,,,,,,,,
+/home/ghostpants/Documents/facultateAn3/CN2/lab00~2/lab00_skel/task01a_test.v,1570505895,verilog,,/home/ghostpants/Documents/facultateAn3/CN2/lab00~2/lab00_skel/task01b_test.v,,task01a_test,,,,,,,,
+/home/ghostpants/Documents/facultateAn3/CN2/lab00~2/lab00_skel/task01b.v,1602861848,verilog,,/home/ghostpants/Documents/facultateAn3/CN2/lab00~2/lab00_skel/task02.v,,task01b,,,,,,,,
+/home/ghostpants/Documents/facultateAn3/CN2/lab00~2/lab00_skel/task01b_test.v,1570506138,verilog,,/home/ghostpants/Documents/facultateAn3/CN2/lab00~2/lab00_skel/task02_test.v,,task01b_test,,,,,,,,
+/home/ghostpants/Documents/facultateAn3/CN2/lab00~2/lab00_skel/task02.v,1602863507,verilog,,/home/ghostpants/Documents/facultateAn3/CN2/lab00~2/lab00_skel/task03.v,,task02,,,,,,,,
+/home/ghostpants/Documents/facultateAn3/CN2/lab00~2/lab00_skel/task02_test.v,1601832798,verilog,,/home/ghostpants/Documents/facultateAn3/CN2/lab00~2/lab00_skel/task03_test.v,,task02_test,,,,,,,,
+/home/ghostpants/Documents/facultateAn3/CN2/lab00~2/lab00_skel/task03.v,1602862062,verilog,,/home/ghostpants/Documents/facultateAn3/CN2/lab00~2/lab00_skel/task01a_test.v,,task03,,,,,,,,
+/home/ghostpants/Documents/facultateAn3/CN2/lab00~2/lab00_skel/task03_test.v,1601833064,verilog,,,,task03_test,,,,,,,,

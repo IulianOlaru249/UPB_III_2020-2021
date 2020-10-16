@@ -1,0 +1,16 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../../task01a.v" \
+"../../../../../task01b.v" \
+"../../../../../task02.v" \
+"../../../../../task03.v" \
+"../../../../../task01a_test.v" \
+"../../../../../task01b_test.v" \
+"../../../../../task02_test.v" \
+"../../../../../task03_test.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort
