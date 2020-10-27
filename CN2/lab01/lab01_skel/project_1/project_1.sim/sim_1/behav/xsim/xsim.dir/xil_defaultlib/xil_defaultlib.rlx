@@ -1,0 +1,11 @@
+0.6
+2019.2
+Nov  6 2019
+21:42:20
+/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/project_1/project_1.sim/sim_1/behav/xsim/glbl.v,1573089660,verilog,,,,glbl,,,,,,,,
+/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/task01.v,1603459370,verilog,,/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/task02.v,,task01,,,,,,,,
+/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/task02.v,1603461612,verilog,,/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/task03.v,,task02,,,,,,,,
+/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/task03.v,1603461572,verilog,,/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/task03_test.v,,task03,,,,,,,,
+/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/task03_test.v,1603460291,verilog,,/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/task04.v,,test_sram,,,,,,,,
+/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/task04.v,1603465658,verilog,,/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/task04_test.v,,task04,,,,,,,,
+/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/task04_test.v,1603039194,verilog,,,,task04_test,,,,,,,,

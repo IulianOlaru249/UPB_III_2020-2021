@@ -1,0 +1,1348 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:39:14 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Fri Oct 23 16:00:21 2020
+# Process ID: 4742
+# Current directory: /home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel
+# Command line: vivado
+# Log file: /home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/vivado.log
+# Journal file: /home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/vivado.jou
+#-----------------------------------------------------------
+start_gui
+create_project project_1 /home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/project_1
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2019.2/data/ip'.
+import_xise /home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/lab01_skel.xise
+CRITICAL WARNING: [Project 1-21] Could not resolve ISE project part 'xc6slx16-3-csg324'. Part replaced with default 'xc7k70tfbv676-1'.
+INFO: [Project 1-195] The current run uses Vivado Strategies; hence no ISE run options will be mapped to this run during the import operation.
+                           Please see the summary report file for details.
+
+INFO: [Project 1-52] Generating summary report file '/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/project_1/import_ise_summary.txt'...
+INFO: [Project 1-88] Report file generated.
+
+WARNING: [Project 1-91] Some exceptions were encountered while importing contents of the ISE project file. Please review the "EXCEPTIONS" section in the summary log file /home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/project_1/import_ise_summary.txt at line 44 for details.
+
+INFO: [Coretcl 2-54] ISE import finished.
+set_property top task01 [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'task01' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/project_1/project_1.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj task01_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/task01.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module task01
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/task02.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module task02
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/task03.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module task03
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/task03_test.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module test_sram
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/task04.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module task04
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/task04_test.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module task04_test
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/project_1/project_1.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/project_1/project_1.sim/sim_1/behav/xsim'
+xelab -wto 6de1d7fd1a17432784de8800cf4d957b --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot task01_behav xil_defaultlib.task01 xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator 2019.2
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2019.2/bin/unwrapped/lnx64.o/xelab -wto 6de1d7fd1a17432784de8800cf4d957b --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot task01_behav xil_defaultlib.task01 xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4100] "/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/project_1/project_1.sim/sim_1/behav/xsim/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.task01
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot task01_behav
+
+****** Webtalk v2019.2 (64-bit)
+  **** SW Build 2708876 on Wed Nov  6 21:39:14 MST 2019
+  **** IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source /home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/project_1/project_1.sim/sim_1/behav/xsim/xsim.dir/task01_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-186] '/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/project_1/project_1.sim/sim_1/behav/xsim/xsim.dir/task01_behav/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Fri Oct 23 16:19:58 2020. For additional details about this file, please refer to the WebTalk help file at /tools/Xilinx/Vivado/2019.2/doc/webtalk_introduction.html.
+INFO: [Common 17-206] Exiting Webtalk at Fri Oct 23 16:19:58 2020...
+run_program: Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 6768.965 ; gain = 0.000 ; free physical = 242 ; free virtual = 24388
+INFO: [USF-XSim-69] 'elaborate' step finished in '5' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "task01_behav -key {Behavioral:sim_1:Functional:task01} -tclbatch {task01.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.2
+Time resolution is 1 ps
+source task01.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'task01_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:10 ; elapsed = 00:00:09 . Memory (MB): peak = 6917.809 ; gain = 148.844 ; free physical = 174 ; free virtual = 24333
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+close_sim: Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 6917.809 ; gain = 0.000 ; free physical = 184 ; free virtual = 24310
+set_property top task02 [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'task02' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/project_1/project_1.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj task02_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/task01.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module task01
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/task02.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module task02
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/task03.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module task03
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/task03_test.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module test_sram
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/task04.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module task04
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/task04_test.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module task04_test
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/project_1/project_1.sim/sim_1/behav/xsim'
+xelab -wto 6de1d7fd1a17432784de8800cf4d957b --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot task02_behav xil_defaultlib.task02 xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator 2019.2
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2019.2/bin/unwrapped/lnx64.o/xelab -wto 6de1d7fd1a17432784de8800cf4d957b --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot task02_behav xil_defaultlib.task02 xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4100] "/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/project_1/project_1.sim/sim_1/behav/xsim/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.task02
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot task02_behav
+
+****** Webtalk v2019.2 (64-bit)
+  **** SW Build 2708876 on Wed Nov  6 21:39:14 MST 2019
+  **** IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source /home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/project_1/project_1.sim/sim_1/behav/xsim/xsim.dir/task02_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-186] '/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/project_1/project_1.sim/sim_1/behav/xsim/xsim.dir/task02_behav/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Fri Oct 23 16:29:51 2020. For additional details about this file, please refer to the WebTalk help file at /tools/Xilinx/Vivado/2019.2/doc/webtalk_introduction.html.
+INFO: [Common 17-206] Exiting Webtalk at Fri Oct 23 16:29:51 2020...
+run_program: Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 6994.898 ; gain = 0.000 ; free physical = 203 ; free virtual = 24144
+INFO: [USF-XSim-69] 'elaborate' step finished in '5' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "task02_behav -key {Behavioral:sim_1:Functional:task02} -tclbatch {task02.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.2
+Time resolution is 1 ps
+source task02.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'task02_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 7130.777 ; gain = 135.879 ; free physical = 197 ; free virtual = 24137
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+close_sim: Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 7130.777 ; gain = 0.000 ; free physical = 241 ; free virtual = 24109
+set_property top test_sram [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'test_sram' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/project_1/project_1.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj test_sram_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/task01.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module task01
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/task02.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module task02
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/task03.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module task03
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/task03_test.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module test_sram
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/task04.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module task04
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/task04_test.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module task04_test
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/project_1/project_1.sim/sim_1/behav/xsim'
+xelab -wto 6de1d7fd1a17432784de8800cf4d957b --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot test_sram_behav xil_defaultlib.test_sram xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator 2019.2
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2019.2/bin/unwrapped/lnx64.o/xelab -wto 6de1d7fd1a17432784de8800cf4d957b --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot test_sram_behav xil_defaultlib.test_sram xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/task03.v" Line 1. Module task03 doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.task03
+Compiling module xil_defaultlib.test_sram
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot test_sram_behav
+
+****** Webtalk v2019.2 (64-bit)
+  **** SW Build 2708876 on Wed Nov  6 21:39:14 MST 2019
+  **** IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source /home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/project_1/project_1.sim/sim_1/behav/xsim/xsim.dir/test_sram_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-186] '/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/project_1/project_1.sim/sim_1/behav/xsim/xsim.dir/test_sram_behav/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Fri Oct 23 16:31:39 2020. For additional details about this file, please refer to the WebTalk help file at /tools/Xilinx/Vivado/2019.2/doc/webtalk_introduction.html.
+INFO: [Common 17-206] Exiting Webtalk at Fri Oct 23 16:31:39 2020...
+run_program: Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 7130.777 ; gain = 0.000 ; free physical = 245 ; free virtual = 24113
+INFO: [USF-XSim-69] 'elaborate' step finished in '5' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "test_sram_behav -key {Behavioral:sim_1:Functional:test_sram} -tclbatch {test_sram.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.2
+Time resolution is 1 ps
+source test_sram.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'test_sram_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 7143.781 ; gain = 13.004 ; free physical = 229 ; free virtual = 24097
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+close_sim: Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 7143.781 ; gain = 0.000 ; free physical = 248 ; free virtual = 24047
+set_property top task04_test [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'task04_test' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/project_1/project_1.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj task04_test_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/task01.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module task01
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/task02.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module task02
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/task03.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module task03
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/task03_test.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module test_sram
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/task04.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module task04
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/task04_test.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module task04_test
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/project_1/project_1.sim/sim_1/behav/xsim'
+xelab -wto 6de1d7fd1a17432784de8800cf4d957b --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot task04_test_behav xil_defaultlib.task04_test xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator 2019.2
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2019.2/bin/unwrapped/lnx64.o/xelab -wto 6de1d7fd1a17432784de8800cf4d957b --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot task04_test_behav xil_defaultlib.task04_test xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 8 differs from formal bit length 7 for port 'address' [/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/task04.v:83]
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/task03.v" Line 1. Module task03 doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/task01.v" Line 1. Module task01 doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.task03
+Compiling module xil_defaultlib.task01
+Compiling module xil_defaultlib.task04
+Compiling module xil_defaultlib.task04_test
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot task04_test_behav
+
+****** Webtalk v2019.2 (64-bit)
+  **** SW Build 2708876 on Wed Nov  6 21:39:14 MST 2019
+  **** IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source /home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/project_1/project_1.sim/sim_1/behav/xsim/xsim.dir/task04_test_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-186] '/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/project_1/project_1.sim/sim_1/behav/xsim/xsim.dir/task04_test_behav/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Fri Oct 23 16:33:11 2020. For additional details about this file, please refer to the WebTalk help file at /tools/Xilinx/Vivado/2019.2/doc/webtalk_introduction.html.
+INFO: [Common 17-206] Exiting Webtalk at Fri Oct 23 16:33:11 2020...
+run_program: Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 7143.781 ; gain = 0.000 ; free physical = 293 ; free virtual = 24093
+INFO: [USF-XSim-69] 'elaborate' step finished in '5' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "task04_test_behav -key {Behavioral:sim_1:Functional:task04_test} -tclbatch {task04_test.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.2
+Time resolution is 1 ps
+source task04_test.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'task04_test_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 7172.797 ; gain = 29.016 ; free physical = 285 ; free virtual = 24085
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+close_sim: Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 7172.797 ; gain = 0.000 ; free physical = 265 ; free virtual = 24132
+set_property top test_sram [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'test_sram' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/project_1/project_1.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj test_sram_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/task01.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module task01
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/task02.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module task02
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/task03.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module task03
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/task03_test.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module test_sram
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/task04.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module task04
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/task04_test.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module task04_test
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/project_1/project_1.sim/sim_1/behav/xsim'
+xelab -wto 6de1d7fd1a17432784de8800cf4d957b --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot test_sram_behav xil_defaultlib.test_sram xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator 2019.2
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2019.2/bin/unwrapped/lnx64.o/xelab -wto 6de1d7fd1a17432784de8800cf4d957b --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot test_sram_behav xil_defaultlib.test_sram xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/task03.v" Line 1. Module task03 doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.task03
+Compiling module xil_defaultlib.test_sram
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot test_sram_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "test_sram_behav -key {Behavioral:sim_1:Functional:test_sram} -tclbatch {test_sram.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.2
+Time resolution is 1 ps
+source test_sram.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'test_sram_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 7223.820 ; gain = 51.023 ; free physical = 553 ; free virtual = 24373
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+set_property top task04_test [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'task04_test' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/project_1/project_1.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj task04_test_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/task01.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module task01
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/task02.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module task02
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/task03.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module task03
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/task03_test.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module test_sram
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/task04.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module task04
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/task04_test.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module task04_test
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/project_1/project_1.sim/sim_1/behav/xsim'
+xelab -wto 6de1d7fd1a17432784de8800cf4d957b --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot task04_test_behav xil_defaultlib.task04_test xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator 2019.2
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2019.2/bin/unwrapped/lnx64.o/xelab -wto 6de1d7fd1a17432784de8800cf4d957b --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot task04_test_behav xil_defaultlib.task04_test xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 8 differs from formal bit length 7 for port 'address' [/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/task04.v:83]
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/task03.v" Line 1. Module task03 doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/task01.v" Line 1. Module task01 doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.task03
+Compiling module xil_defaultlib.task01
+Compiling module xil_defaultlib.task04
+Compiling module xil_defaultlib.task04_test
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot task04_test_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "task04_test_behav -key {Behavioral:sim_1:Functional:task04_test} -tclbatch {task04_test.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.2
+Time resolution is 1 ps
+source task04_test.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'task04_test_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+set_property top task02 [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+add_files -norecurse /home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/task03.v
+WARNING: [filemgmt 56-12] File '/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/task03.v' cannot be added to the project because it already exists in the project, skipping this file
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'task02' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/project_1/project_1.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj task02_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/task01.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module task01
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/task02.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module task02
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/task03.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module task03
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/task03_test.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module test_sram
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/task04.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module task04
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/task04_test.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module task04_test
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/project_1/project_1.sim/sim_1/behav/xsim'
+xelab -wto 6de1d7fd1a17432784de8800cf4d957b --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot task02_behav xil_defaultlib.task02 xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator 2019.2
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2019.2/bin/unwrapped/lnx64.o/xelab -wto 6de1d7fd1a17432784de8800cf4d957b --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot task02_behav xil_defaultlib.task02 xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4100] "/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/project_1/project_1.sim/sim_1/behav/xsim/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.task02
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot task02_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "task02_behav -key {Behavioral:sim_1:Functional:task02} -tclbatch {task02.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.2
+Time resolution is 1 ps
+source task02.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'task02_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'task02' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/project_1/project_1.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj task02_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/task01.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module task01
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/task02.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module task02
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/task03.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module task03
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/task03_test.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module test_sram
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/task04.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module task04
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/task04_test.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module task04_test
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/project_1/project_1.sim/sim_1/behav/xsim'
+xelab -wto 6de1d7fd1a17432784de8800cf4d957b --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot task02_behav xil_defaultlib.task02 xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator 2019.2
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2019.2/bin/unwrapped/lnx64.o/xelab -wto 6de1d7fd1a17432784de8800cf4d957b --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot task02_behav xil_defaultlib.task02 xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4100] "/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/project_1/project_1.sim/sim_1/behav/xsim/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.task02
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot task02_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "task02_behav -key {Behavioral:sim_1:Functional:task02} -tclbatch {task02.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.2
+Time resolution is 1 ps
+source task02.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'task02_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+set_property top task04_test [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'task04_test' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/project_1/project_1.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj task04_test_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/task01.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module task01
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/task02.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module task02
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/task03.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module task03
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/task03_test.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module test_sram
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/task04.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module task04
+INFO: [VRFC 10-2458] undeclared symbol buff_w_sram, assumed default net type wire [/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/task04.v:89]
+INFO: [VRFC 10-2458] undeclared symbol sram_wire, assumed default net type wire [/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/task04.v:94]
+INFO: [VRFC 10-2458] undeclared symbol rom_buffer, assumed default net type wire [/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/task04.v:95]
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/task04_test.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module task04_test
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/project_1/project_1.sim/sim_1/behav/xsim'
+xelab -wto 6de1d7fd1a17432784de8800cf4d957b --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot task04_test_behav xil_defaultlib.task04_test xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator 2019.2
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2019.2/bin/unwrapped/lnx64.o/xelab -wto 6de1d7fd1a17432784de8800cf4d957b --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot task04_test_behav xil_defaultlib.task04_test xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 8 differs from formal bit length 7 for port 'address' [/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/task04.v:94]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 8 for port 'data' [/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/task04.v:95]
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/task03.v" Line 1. Module task03 doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/task01.v" Line 1. Module task01 doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.task03
+Compiling module xil_defaultlib.task01
+Compiling module xil_defaultlib.task04
+Compiling module xil_defaultlib.task04_test
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot task04_test_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "task04_test_behav -key {Behavioral:sim_1:Functional:task04_test} -tclbatch {task04_test.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.2
+Time resolution is 1 ps
+source task04_test.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'task04_test_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'task04_test' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/project_1/project_1.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj task04_test_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/task01.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module task01
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/task02.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module task02
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/task03.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module task03
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/task03_test.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module test_sram
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/task04.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module task04
+INFO: [VRFC 10-2458] undeclared symbol buff_w_sram, assumed default net type wire [/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/task04.v:89]
+INFO: [VRFC 10-2458] undeclared symbol sram_wire, assumed default net type wire [/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/task04.v:94]
+INFO: [VRFC 10-2458] undeclared symbol rom_buffer, assumed default net type wire [/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/task04.v:95]
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/task04_test.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module task04_test
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/project_1/project_1.sim/sim_1/behav/xsim'
+xelab -wto 6de1d7fd1a17432784de8800cf4d957b --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot task04_test_behav xil_defaultlib.task04_test xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator 2019.2
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2019.2/bin/unwrapped/lnx64.o/xelab -wto 6de1d7fd1a17432784de8800cf4d957b --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot task04_test_behav xil_defaultlib.task04_test xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 8 differs from formal bit length 7 for port 'address' [/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/task04.v:94]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 8 for port 'data' [/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/task04.v:95]
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/task03.v" Line 1. Module task03 doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/task01.v" Line 1. Module task01 doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.task03
+Compiling module xil_defaultlib.task01
+Compiling module xil_defaultlib.task04
+Compiling module xil_defaultlib.task04_test
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot task04_test_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "task04_test_behav -key {Behavioral:sim_1:Functional:task04_test} -tclbatch {task04_test.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.2
+Time resolution is 1 ps
+source task04_test.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'task04_test_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'task04_test' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/project_1/project_1.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj task04_test_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/task01.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module task01
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/task02.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module task02
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/task03.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module task03
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/task03_test.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module test_sram
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/task04.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module task04
+INFO: [VRFC 10-2458] undeclared symbol buff_w_sram, assumed default net type wire [/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/task04.v:89]
+INFO: [VRFC 10-2458] undeclared symbol sram_wire, assumed default net type wire [/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/task04.v:94]
+INFO: [VRFC 10-2458] undeclared symbol rom_buffer, assumed default net type wire [/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/task04.v:95]
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/task04_test.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module task04_test
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/project_1/project_1.sim/sim_1/behav/xsim'
+xelab -wto 6de1d7fd1a17432784de8800cf4d957b --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot task04_test_behav xil_defaultlib.task04_test xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator 2019.2
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2019.2/bin/unwrapped/lnx64.o/xelab -wto 6de1d7fd1a17432784de8800cf4d957b --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot task04_test_behav xil_defaultlib.task04_test xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 8 differs from formal bit length 7 for port 'address' [/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/task04.v:94]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 8 for port 'data' [/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/task04.v:95]
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/task03.v" Line 1. Module task03 doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/task01.v" Line 1. Module task01 doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.task03
+Compiling module xil_defaultlib.task01
+Compiling module xil_defaultlib.task04
+Compiling module xil_defaultlib.task04_test
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot task04_test_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "task04_test_behav -key {Behavioral:sim_1:Functional:task04_test} -tclbatch {task04_test.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.2
+Time resolution is 1 ps
+source task04_test.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'task04_test_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'task04_test' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/project_1/project_1.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj task04_test_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/task01.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module task01
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/task02.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module task02
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/task03.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module task03
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/task03_test.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module test_sram
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/task04.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module task04
+INFO: [VRFC 10-2458] undeclared symbol buff_w_sram, assumed default net type wire [/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/task04.v:89]
+INFO: [VRFC 10-2458] undeclared symbol sram_wire, assumed default net type wire [/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/task04.v:94]
+INFO: [VRFC 10-2458] undeclared symbol rom_buffer, assumed default net type wire [/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/task04.v:95]
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/task04_test.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module task04_test
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/project_1/project_1.sim/sim_1/behav/xsim'
+xelab -wto 6de1d7fd1a17432784de8800cf4d957b --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot task04_test_behav xil_defaultlib.task04_test xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator 2019.2
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2019.2/bin/unwrapped/lnx64.o/xelab -wto 6de1d7fd1a17432784de8800cf4d957b --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot task04_test_behav xil_defaultlib.task04_test xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 8 differs from formal bit length 7 for port 'address' [/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/task04.v:94]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 8 for port 'data' [/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/task04.v:95]
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/task03.v" Line 1. Module task03 doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/task01.v" Line 1. Module task01 doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.task03
+Compiling module xil_defaultlib.task01
+Compiling module xil_defaultlib.task04
+Compiling module xil_defaultlib.task04_test
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot task04_test_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "task04_test_behav -key {Behavioral:sim_1:Functional:task04_test} -tclbatch {task04_test.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.2
+Time resolution is 1 ps
+source task04_test.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'task04_test_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'task04_test' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/project_1/project_1.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj task04_test_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/task01.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module task01
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/task02.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module task02
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/task03.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module task03
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/task03_test.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module test_sram
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/task04.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module task04
+INFO: [VRFC 10-2458] undeclared symbol buff_w_sram, assumed default net type wire [/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/task04.v:89]
+INFO: [VRFC 10-2458] undeclared symbol sram_wire, assumed default net type wire [/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/task04.v:94]
+INFO: [VRFC 10-2458] undeclared symbol rom_buffer, assumed default net type wire [/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/task04.v:95]
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/task04_test.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module task04_test
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/project_1/project_1.sim/sim_1/behav/xsim'
+xelab -wto 6de1d7fd1a17432784de8800cf4d957b --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot task04_test_behav xil_defaultlib.task04_test xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator 2019.2
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2019.2/bin/unwrapped/lnx64.o/xelab -wto 6de1d7fd1a17432784de8800cf4d957b --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot task04_test_behav xil_defaultlib.task04_test xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 8 differs from formal bit length 7 for port 'address' [/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/task04.v:94]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 8 for port 'data' [/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/task04.v:95]
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/task03.v" Line 1. Module task03 doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/task01.v" Line 1. Module task01 doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.task03
+Compiling module xil_defaultlib.task01
+Compiling module xil_defaultlib.task04
+Compiling module xil_defaultlib.task04_test
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot task04_test_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "task04_test_behav -key {Behavioral:sim_1:Functional:task04_test} -tclbatch {task04_test.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.2
+Time resolution is 1 ps
+source task04_test.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'task04_test_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'task04_test' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/project_1/project_1.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj task04_test_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/task01.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module task01
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/task02.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module task02
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/task03.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module task03
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/task03_test.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module test_sram
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/task04.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module task04
+INFO: [VRFC 10-2458] undeclared symbol buff_w_sram, assumed default net type wire [/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/task04.v:88]
+INFO: [VRFC 10-2458] undeclared symbol sram_wire, assumed default net type wire [/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/task04.v:93]
+INFO: [VRFC 10-2458] undeclared symbol rom_buffer, assumed default net type wire [/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/task04.v:94]
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/task04_test.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module task04_test
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/project_1/project_1.sim/sim_1/behav/xsim'
+xelab -wto 6de1d7fd1a17432784de8800cf4d957b --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot task04_test_behav xil_defaultlib.task04_test xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator 2019.2
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2019.2/bin/unwrapped/lnx64.o/xelab -wto 6de1d7fd1a17432784de8800cf4d957b --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot task04_test_behav xil_defaultlib.task04_test xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 8 differs from formal bit length 7 for port 'address' [/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/task04.v:93]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 8 for port 'data' [/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/task04.v:94]
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/task03.v" Line 1. Module task03 doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/task01.v" Line 1. Module task01 doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.task03
+Compiling module xil_defaultlib.task01
+Compiling module xil_defaultlib.task04
+Compiling module xil_defaultlib.task04_test
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot task04_test_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "task04_test_behav -key {Behavioral:sim_1:Functional:task04_test} -tclbatch {task04_test.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.2
+Time resolution is 1 ps
+source task04_test.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'task04_test_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'task04_test' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/project_1/project_1.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj task04_test_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/task01.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module task01
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/task02.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module task02
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/task03.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module task03
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/task03_test.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module test_sram
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/task04.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module task04
+INFO: [VRFC 10-2458] undeclared symbol buff_w_sram, assumed default net type wire [/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/task04.v:88]
+INFO: [VRFC 10-2458] undeclared symbol sram_wire, assumed default net type wire [/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/task04.v:93]
+INFO: [VRFC 10-2458] undeclared symbol rom_buffer, assumed default net type wire [/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/task04.v:94]
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/task04_test.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module task04_test
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/project_1/project_1.sim/sim_1/behav/xsim'
+xelab -wto 6de1d7fd1a17432784de8800cf4d957b --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot task04_test_behav xil_defaultlib.task04_test xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator 2019.2
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2019.2/bin/unwrapped/lnx64.o/xelab -wto 6de1d7fd1a17432784de8800cf4d957b --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot task04_test_behav xil_defaultlib.task04_test xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 8 differs from formal bit length 7 for port 'address' [/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/task04.v:93]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 8 for port 'data' [/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/task04.v:94]
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/task03.v" Line 1. Module task03 doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/task01.v" Line 1. Module task01 doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.task03
+Compiling module xil_defaultlib.task01
+Compiling module xil_defaultlib.task04
+Compiling module xil_defaultlib.task04_test
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot task04_test_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "task04_test_behav -key {Behavioral:sim_1:Functional:task04_test} -tclbatch {task04_test.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.2
+Time resolution is 1 ps
+source task04_test.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'task04_test_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'task04_test' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/project_1/project_1.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj task04_test_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/task01.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module task01
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/task02.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module task02
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/task03.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module task03
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/task03_test.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module test_sram
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/task04.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module task04
+INFO: [VRFC 10-2458] undeclared symbol buff_w_sram, assumed default net type wire [/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/task04.v:87]
+INFO: [VRFC 10-2458] undeclared symbol sram_wire, assumed default net type wire [/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/task04.v:93]
+INFO: [VRFC 10-2458] undeclared symbol rom_buffer, assumed default net type wire [/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/task04.v:94]
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/task04_test.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module task04_test
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/project_1/project_1.sim/sim_1/behav/xsim'
+xelab -wto 6de1d7fd1a17432784de8800cf4d957b --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot task04_test_behav xil_defaultlib.task04_test xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator 2019.2
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2019.2/bin/unwrapped/lnx64.o/xelab -wto 6de1d7fd1a17432784de8800cf4d957b --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot task04_test_behav xil_defaultlib.task04_test xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 8 differs from formal bit length 7 for port 'address' [/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/task04.v:93]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 8 for port 'data' [/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/task04.v:94]
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/task03.v" Line 1. Module task03 doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/task01.v" Line 1. Module task01 doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.task03
+Compiling module xil_defaultlib.task01
+Compiling module xil_defaultlib.task04
+Compiling module xil_defaultlib.task04_test
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot task04_test_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "task04_test_behav -key {Behavioral:sim_1:Functional:task04_test} -tclbatch {task04_test.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.2
+Time resolution is 1 ps
+source task04_test.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'task04_test_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'task04_test' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/project_1/project_1.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj task04_test_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/task01.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module task01
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/task02.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module task02
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/task03.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module task03
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/task03_test.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module test_sram
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/task04.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module task04
+INFO: [VRFC 10-2458] undeclared symbol buff_w_sram, assumed default net type wire [/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/task04.v:87]
+INFO: [VRFC 10-2458] undeclared symbol srom_buffer, assumed default net type wire [/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/task04.v:94]
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/task04_test.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module task04_test
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/project_1/project_1.sim/sim_1/behav/xsim'
+xelab -wto 6de1d7fd1a17432784de8800cf4d957b --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot task04_test_behav xil_defaultlib.task04_test xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator 2019.2
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2019.2/bin/unwrapped/lnx64.o/xelab -wto 6de1d7fd1a17432784de8800cf4d957b --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot task04_test_behav xil_defaultlib.task04_test xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 8 differs from formal bit length 7 for port 'address' [/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/task04.v:93]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 8 for port 'data' [/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/task04.v:94]
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/task03.v" Line 1. Module task03 doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/task01.v" Line 1. Module task01 doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.task03
+Compiling module xil_defaultlib.task01
+Compiling module xil_defaultlib.task04
+Compiling module xil_defaultlib.task04_test
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot task04_test_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "task04_test_behav -key {Behavioral:sim_1:Functional:task04_test} -tclbatch {task04_test.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.2
+Time resolution is 1 ps
+source task04_test.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'task04_test_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'task04_test' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/project_1/project_1.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj task04_test_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/task01.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module task01
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/task02.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module task02
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/task03.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module task03
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/task03_test.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module test_sram
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/task04.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module task04
+INFO: [VRFC 10-2458] undeclared symbol buff_w_sram, assumed default net type wire [/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/task04.v:87]
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/task04_test.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module task04_test
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/project_1/project_1.sim/sim_1/behav/xsim'
+xelab -wto 6de1d7fd1a17432784de8800cf4d957b --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot task04_test_behav xil_defaultlib.task04_test xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator 2019.2
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2019.2/bin/unwrapped/lnx64.o/xelab -wto 6de1d7fd1a17432784de8800cf4d957b --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot task04_test_behav xil_defaultlib.task04_test xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 8 differs from formal bit length 7 for port 'address' [/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/task04.v:93]
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/task03.v" Line 1. Module task03 doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/task01.v" Line 1. Module task01 doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.task03
+Compiling module xil_defaultlib.task01
+Compiling module xil_defaultlib.task04
+Compiling module xil_defaultlib.task04_test
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot task04_test_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "task04_test_behav -key {Behavioral:sim_1:Functional:task04_test} -tclbatch {task04_test.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.2
+Time resolution is 1 ps
+source task04_test.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'task04_test_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+exit
+INFO: [Common 17-206] Exiting Vivado at Fri Oct 23 18:19:01 2020...

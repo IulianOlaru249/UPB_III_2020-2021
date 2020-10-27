@@ -1,0 +1,13 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/task01.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module task01
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/task02.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module task02
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/task03.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module task03
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/task03_test.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module test_sram
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/task04.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module task04
+INFO: [VRFC 10-2458] undeclared symbol buff_w_sram, assumed default net type wire [/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/task04.v:87]
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ghostpants/Documents/facultateAn3/CN2/lab01/lab01_skel/task04_test.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module task04_test

@@ -1,0 +1,12 @@
+
+{ 
+    crc :  468933275285459190  , 
+    ccp_crc :  0  , 
+    cmdline : " -wto 6de1d7fd1a17432784de8800cf4d957b --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot test_sram_behav xil_defaultlib.test_sram xil_defaultlib.glbl" , 
+    buildDate : "Nov  6 2019" , 
+    buildTime : "21:42:20" , 
+    linkCmd : "/usr/bin/gcc -Wa,-W  -O -fPIC  -m64  -Wl,--no-as-needed  -Wl,--unresolved-symbols=ignore-all  -o \"xsim.dir/test_sram_behav/xsimk\"   \"xsim.dir/test_sram_behav/obj/xsim_0.lnx64.o\" \"xsim.dir/test_sram_behav/obj/xsim_1.lnx64.o\" -L\"/tools/Xilinx/Vivado/2019.2/lib/lnx64.o\" -lrdi_simulator_kernel   -lrdi_simbridge_kernel" , 
+    aggregate_nets : 
+    [ 
+    ] 
+} 
