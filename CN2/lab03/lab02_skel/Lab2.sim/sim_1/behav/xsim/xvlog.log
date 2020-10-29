@@ -1,0 +1,28 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ilies/OneDrive/Desktop/lab02_skel/Lab2.srcs/sources_1/imports/lab02_skel/alu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module alu
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ilies/OneDrive/Desktop/lab02_skel/Lab2.srcs/sources_1/imports/lab02_skel/checker.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module checker
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ilies/OneDrive/Desktop/lab02_skel/Lab2.srcs/sources_1/imports/lab02_skel/control_unit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module control_unit
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ilies/OneDrive/Desktop/lab02_skel/Lab2.srcs/sources_1/imports/lab02_skel/cpu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cpu
+WARNING: [VRFC 10-3380] identifier 'pipeline_stage' is used before its declaration [C:/Users/ilies/OneDrive/Desktop/lab02_skel/Lab2.srcs/sources_1/imports/lab02_skel/cpu.v:22]
+WARNING: [VRFC 10-3380] identifier 'alu_rr' is used before its declaration [C:/Users/ilies/OneDrive/Desktop/lab02_skel/Lab2.srcs/sources_1/imports/lab02_skel/cpu.v:23]
+WARNING: [VRFC 10-3380] identifier 'alu_rd' is used before its declaration [C:/Users/ilies/OneDrive/Desktop/lab02_skel/Lab2.srcs/sources_1/imports/lab02_skel/cpu.v:24]
+WARNING: [VRFC 10-3380] identifier 'alu_out' is used before its declaration [C:/Users/ilies/OneDrive/Desktop/lab02_skel/Lab2.srcs/sources_1/imports/lab02_skel/cpu.v:25]
+WARNING: [VRFC 10-3380] identifier 'program_counter' is used before its declaration [C:/Users/ilies/OneDrive/Desktop/lab02_skel/Lab2.srcs/sources_1/imports/lab02_skel/cpu.v:26]
+WARNING: [VRFC 10-3380] identifier 'alu_flags_out' is used before its declaration [C:/Users/ilies/OneDrive/Desktop/lab02_skel/Lab2.srcs/sources_1/imports/lab02_skel/cpu.v:27]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ilies/OneDrive/Desktop/lab02_skel/Lab2.srcs/sources_1/imports/lab02_skel/decode_unit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module decode_unit
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ilies/OneDrive/Desktop/lab02_skel/Lab2.srcs/sources_1/imports/lab02_skel/reg_file_interface_unit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module reg_file_interface_unit
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ilies/OneDrive/Desktop/lab02_skel/Lab2.srcs/sources_1/imports/lab02_skel/register_file.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dual_port_sram
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ilies/OneDrive/Desktop/lab02_skel/Lab2.srcs/sources_1/imports/lab02_skel/rom.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rom
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ilies/OneDrive/Desktop/lab02_skel/Lab2.srcs/sources_1/imports/lab02_skel/signal_generation_unit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module signal_generation_unit
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ilies/OneDrive/Desktop/lab02_skel/Lab2.srcs/sources_1/imports/lab02_skel/state_machine.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module state_machine
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/ilies/OneDrive/Desktop/lab02_skel/Lab2.srcs/sources_1/imports/lab02_skel/checker_view.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module checker_view

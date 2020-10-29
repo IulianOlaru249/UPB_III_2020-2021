@@ -1,0 +1,33 @@
+Vivado Simulator 2019.2
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: E:/Vivado/Vivado/2019.2/bin/unwrapped/win64.o/xelab.exe -wto 8c11e807f524489ca23a9ff7184a3069 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot checker_view_behav xil_defaultlib.checker_view xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "C:/Users/ilies/OneDrive/Desktop/lab02_skel/Lab2.srcs/sources_1/imports/lab02_skel/checker.v" Line 5. Module checker doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/ilies/OneDrive/Desktop/lab02_skel/Lab2.srcs/sources_1/imports/lab02_skel/cpu.v" Line 2. Module cpu doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/ilies/OneDrive/Desktop/lab02_skel/Lab2.srcs/sources_1/imports/lab02_skel/control_unit.v" Line 2. Module control_unit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/ilies/OneDrive/Desktop/lab02_skel/Lab2.srcs/sources_1/imports/lab02_skel/state_machine.v" Line 2. Module state_machine doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/ilies/OneDrive/Desktop/lab02_skel/Lab2.srcs/sources_1/imports/lab02_skel/decode_unit.v" Line 2. Module decode_unit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/ilies/OneDrive/Desktop/lab02_skel/Lab2.srcs/sources_1/imports/lab02_skel/signal_generation_unit.v" Line 2. Module signal_generation_unit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/ilies/OneDrive/Desktop/lab02_skel/Lab2.srcs/sources_1/imports/lab02_skel/reg_file_interface_unit.v" Line 2. Module reg_file_interface_unit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/ilies/OneDrive/Desktop/lab02_skel/Lab2.srcs/sources_1/imports/lab02_skel/alu.v" Line 4. Module alu doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/ilies/OneDrive/Desktop/lab02_skel/Lab2.srcs/sources_1/imports/lab02_skel/rom.v" Line 1. Module rom(ADDR_WIDTH=10) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/ilies/OneDrive/Desktop/lab02_skel/Lab2.srcs/sources_1/imports/lab02_skel/register_file.v" Line 4. Module dual_port_sram doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.state_machine
+Compiling module xil_defaultlib.decode_unit
+Compiling module xil_defaultlib.signal_generation_unit
+Compiling module xil_defaultlib.reg_file_interface_unit
+Compiling module xil_defaultlib.control_unit
+Compiling module xil_defaultlib.alu
+Compiling module xil_defaultlib.rom(ADDR_WIDTH=10)
+Compiling module xil_defaultlib.dual_port_sram
+Compiling module xil_defaultlib.cpu
+Compiling module xil_defaultlib.checker
+Compiling module xil_defaultlib.checker_view
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot checker_view_behav
