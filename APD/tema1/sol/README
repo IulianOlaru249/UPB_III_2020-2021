@@ -1,0 +1,64 @@
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Olaru Gabriel Iulian
+334CC
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Tema1 APD 2020
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Data handleing:
+~~~~~~~~~~~~~~~
+
+* The parameters are passed to the thread function via the _thread_params
+structure described in tema1_par.c.
+
+* Fields:
+	- the thread id, number of threads for computing the start and end
+	- the width and height of julia and mandelbrot images, so they are
+computed only once in main.
+	- the params needed for Julia and Mandelbrot iterations described
+by the _params structure.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Main:
+~~~~~
+	* Memory for an array of _thread_params structures is allocated.
+There will be one structure for each thread, so there are no race 
+conditions.	
+	* Threads are created and joined when done
+	* Memory is freed 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Thread_Function:
+~~~~~~~~~~~~~~~~
+	* Only thread 0 allocates memory for the Julia result. A barrier
+is set so the other threads wait for this to be done
+	* Computation for the Julia algorithms are run. A barrier is set
+so the other threads finish their work before writing to the file
+	* The result is written in the output file then memory is freed
+	* Same operations are done for the Mandelbrot algorithm
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Run_Julia:
+~~~~~~~~~~
+	* start and end are computed so the workload is broken in chunks
+for each thread 
+	* computations are mande
+	* a barrier is set so the threads finish their work before
+converting to screen coordinates
+	* new start and end for converting coordinates
+	* computations are mande
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Run_Mandelbrot:
+~~~~~~~~~~~~~~~
+	* start and end are computed so the workload is broken in chunks
+for each thread 
+	* computations are mande
+	* a barrier is set so the threads finish their work before
+converting to screen coordinates
+	* new start and end for converting coordinates
+	* computations are mande
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

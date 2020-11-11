@@ -1,0 +1,42 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+PTHREAD_BARRIER_H_	pthread_barrier_mac.h	4;"	d
+_complex	tema1.c	/^typedef struct _complex {$/;"	s	file:
+_params	tema1.c	/^typedef struct _params {$/;"	s	file:
+a	tema1.c	/^	double a;$/;"	m	struct:_complex	file:
+allocate_memory	tema1.c	/^int **allocate_memory(int width, int height)$/;"	f
+b	tema1.c	/^	double b;$/;"	m	struct:_complex	file:
+c_julia	tema1.c	/^	complex c_julia;$/;"	m	struct:_params	file:
+complex	tema1.c	/^} complex;$/;"	t	typeref:struct:_complex	file:
+cond	pthread_barrier_mac.h	/^    pthread_cond_t cond;$/;"	m	struct:__anon1
+count	pthread_barrier_mac.h	/^    int count;$/;"	m	struct:__anon1
+free_memory	tema1.c	/^void free_memory(int **result, int height)$/;"	f
+get_args	tema1.c	/^void get_args(int argc, char **argv)$/;"	f
+in_filename_julia	tema1.c	/^char *in_filename_julia;$/;"	v
+in_filename_mandelbrot	tema1.c	/^char *in_filename_mandelbrot;$/;"	v
+is_julia	tema1.c	/^	int is_julia, iterations;$/;"	m	struct:_params	file:
+iterations	tema1.c	/^	int is_julia, iterations;$/;"	m	struct:_params	file:
+main	tema1.c	/^int main(int argc, char *argv[])$/;"	f
+mutex	pthread_barrier_mac.h	/^    pthread_mutex_t mutex;$/;"	m	struct:__anon1
+out_filename_julia	tema1.c	/^char *out_filename_julia;$/;"	v
+out_filename_mandelbrot	tema1.c	/^char *out_filename_mandelbrot;$/;"	v
+params	tema1.c	/^} params;$/;"	t	typeref:struct:_params	file:
+pthread_barrier_destroy	pthread_barrier_mac.h	/^int pthread_barrier_destroy(pthread_barrier_t *barrier)$/;"	f
+pthread_barrier_init	pthread_barrier_mac.h	/^int pthread_barrier_init(pthread_barrier_t *barrier, const pthread_barrierattr_t *attr, unsigned int count)$/;"	f
+pthread_barrier_t	pthread_barrier_mac.h	/^} pthread_barrier_t;$/;"	t	typeref:struct:__anon1
+pthread_barrier_wait	pthread_barrier_mac.h	/^int pthread_barrier_wait(pthread_barrier_t *barrier)$/;"	f
+pthread_barrierattr_t	pthread_barrier_mac.h	/^typedef int pthread_barrierattr_t;$/;"	t
+read_input_file	tema1.c	/^void read_input_file(char *in_filename, params* par)$/;"	f
+resolution	tema1.c	/^	double x_min, x_max, y_min, y_max, resolution;$/;"	m	struct:_params	file:
+run_julia	tema1.c	/^void run_julia(params *par, int **result, int width, int height)$/;"	f
+run_mandelbrot	tema1.c	/^void run_mandelbrot(params *par, int **result, int width, int height)$/;"	f
+tripCount	pthread_barrier_mac.h	/^    int tripCount;$/;"	m	struct:__anon1
+write_output_file	tema1.c	/^void write_output_file(char *out_filename, int **result, int width, int height)$/;"	f
+x_max	tema1.c	/^	double x_min, x_max, y_min, y_max, resolution;$/;"	m	struct:_params	file:
+x_min	tema1.c	/^	double x_min, x_max, y_min, y_max, resolution;$/;"	m	struct:_params	file:
+y_max	tema1.c	/^	double x_min, x_max, y_min, y_max, resolution;$/;"	m	struct:_params	file:
+y_min	tema1.c	/^	double x_min, x_max, y_min, y_max, resolution;$/;"	m	struct:_params	file:
