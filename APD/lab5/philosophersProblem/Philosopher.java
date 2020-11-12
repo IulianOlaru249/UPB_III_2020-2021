@@ -12,6 +12,12 @@ public class Philosopher implements Runnable {
 		this.leftFork = leftFork;
 		this.rightFork = rightFork;
 		this.id = id;
+
+		// Facem unul din filosofi sa apuce furculitele in ordine inversa
+		if(id == 0) {
+			this.leftFork = rightFork;
+			this.rightFork = leftFork;
+		}
 	}
 
 	private void sleep() {

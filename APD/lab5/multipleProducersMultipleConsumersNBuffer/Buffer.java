@@ -14,11 +14,20 @@ public class Buffer {
         queue = new LimitedQueue(size);
     }
 
-	void put(int value) {
-        queue.add(value);        
+    synchronized void put(int value) {
+            while (!this.queue.isEmpty()) {
+                try {this.wait();}catch(Exception ex) {}
+            }
+
+        queue.add(value);
+        notifyAll();
 	}
 
-	int get() {
+    synchronized int get() {
+        while (this.queue.isEmpty()) {
+            try {this.wait();}catch(Exception ex) {}
+        }
+        this.notifyAll();
         return (int)queue.poll();
 	}
 }

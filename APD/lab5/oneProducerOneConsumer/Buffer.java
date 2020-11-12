@@ -5,12 +5,29 @@ package oneProducerOneConsumer;
  */
 public class Buffer {
 	int a;
+	boolean empty;
 
-	void put(int value) {
-		a = value;
+	Buffer () {
+		this.empty = true;
 	}
 
-	int get() {
+	synchronized void put(int value) { //Produce
+		while (!this.empty) {
+			try {this.wait();}catch(Exception ex) {}
+		}
+
+		a = value;
+		this.empty = false;
+		this.notifyAll();
+	}
+
+	synchronized int get() {	//Consume
+		while (this.empty) {
+			try {this.wait();}catch(Exception ex) {}
+		}
+
+		this.notifyAll();
+		this.empty = true;
 		return a;
 	}
 }
