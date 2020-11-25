@@ -1,10 +1,5 @@
 package multipleProducersMultipleConsumersNBuffer;
 
-/**
- * @author Gabriel Gutu <gabriel.gutu at upb.ro>
- * 
- *         DO NOT MODIFY
- */
 public class Main {
 	public static final int N = 100000;
 	public static final int N_CONSUMERS = 5;
