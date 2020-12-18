@@ -14,7 +14,7 @@ pthread_mutex_t mutex;
  */
 pthread_barrier_t barrier;
 
-/* Problem size */
+/* !!! Problem size !!!*/
 int N = 100;
 
 /*!!! Result !!! */
@@ -25,7 +25,7 @@ typedef struct _thread_args {
 	long id;
 	int threads;
 	int N;
-	/* Fill With ParAmeter If Needed */
+	/* !!! Fill With ParAmeter If Needed !!!*/
 } thread_args;
 
 
@@ -56,6 +56,7 @@ int main() {
 
 	/* Get number of cores */
 	int cores = sysconf(_SC_NPROCESSORS_CONF); 
+	//cores = ;
 
 	/* Parameters for thread function. */
 	thread_args **thr_args = (thread_args **) malloc (cores * sizeof (struct _thread_args));

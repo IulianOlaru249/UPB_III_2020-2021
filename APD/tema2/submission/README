@@ -1,0 +1,127 @@
+################################################################################
+Olaru Gabriel Iulian
+334CC
+Assignment no2 ~ APD
+Traffic Simulator
+################################################################################
+
+	SimpleIntersection is an implementation of the Intersection interface.
+This will be used to pass variables to between the reader and the habdle 
+functions. All variables will be declared in the SimpleIntersection class and
+initiated with the apropiate values in the ReaderHandlerFactory class.
+
+################################################################################
+Task 1 - simple_semaphore 
+
+* The car reaches the roundabout and printh the message
+* Then, the car simulates going in the roundabout with a sleep
+* Then, the car exits the roundabout and prints a message
+
+################################################################################
+Task 2 - simple_n_roundabout
+
+A semaphore with one token is needed in order to make sure there is only n cars
+in the roundabout.
+
+* The car reaches the roundabout and printh the message
+* Car enters the roundabout and then takes one token from the semaphore
+* Then, the car simulates going in the roundabout with a sleep
+* Then, the car exits the roundabout prints a message, and releases a token
+
+################################################################################
+Task 3 - simple_strict_1_car_roundabout
+
+A semaphore with one token is needed in order to make sure there is only 1 car
+in the roundabout on each direction.
+A barrier is required so no other cars will enter the roundabout untill the cars
+that were already inside exit.
+
+* The car reaches the roundabout and printh the message
+* Car enters the roundabout and take one token so the semaphore turns red
+* Then, the car simulates going in the roundabout with a sleep
+* Then, the car exits the roundabout prints a message, and releases a token
+* Then, the car waits in a barrier so all other cars exit the roundabout at the
+	same time.
+
+################################################################################
+Task 4 - simple_strict_x_car_roundabout
+
+A semaphore with one token is needed in order to make sure there are only x cars
+in the roundabout on each direction.
+Also, two barriers will be neded: one for the total number of cars and other for
+the number of directions * max car on each direction.
+
+* The car reaches the roundabout and printh the message
+* The car will wait in a barrier so all other cars reach the roundabout
+* The car will be selected to enter the roundabout and take one token from
+	the semaphore
+* The car will wait in another barrier so all other cars are selected
+* Then, the car prints a message and simulates going in the roundabout with
+	a sleep
+* Then, the car waits in a barrier so all other cars exit the roundabout at the
+	same time.
+* Then, the car exits the roundabout
+
+################################################################################
+Task 5 - simple_max_x_car_roundabout
+
+The same stept as task4 are taken, only now the cars can enter the roundabout at
+any time, so there will be no need for the cars to wait on other cars when
+reaching the roundabout or  after being selected.
+
+################################################################################
+Task 6 - priority_intersection
+
+One semaphore with tokens equal to the number of the maximum cars with high
+priority.
+
+Two cases are handled:  1. when a car wih high priority approaches
+			2. when a car with low priority approaches
+
+1. * The car with high priority enter the intersection and aquires one token
+	from the semaphore
+   * The car goes trough the intersection for 2 seconds
+   * The car exits the ntersection and releases the token
+
+2. * The car approaches the intersections and tries to enter
+   * The car tries to take all the tokens from the semaphore, so if there is any
+	car with high priority in the intersection the low priority car will not
+	pass. This also ensures that no other cars with low priority will pass
+	before it.
+   * The car exits the roundabout and releases the token.
+################################################################################
+Task 7 - crosswalk
+
+In Pedestrians:
+* We will need a common monitor so we can notify all the cars from the
+pedestrian threads when they cross the street. This will be done in the
+pedestrian class, when the max number of waiting pedestrians is reached.
+
+In the handle function:
+* We will need a boolean to keep track of the color of the imaginarry semaphore.
+While pedestrians are still coming, while they are passing, we will print the
+color of the semaphore and then wait for a notification from the pedestrians.
+This loop needs to be inside a mutex because of the race conditions that can
+occur.
+
+################################################################################
+Task 8 - simple_maintenance
+
+There is one semaphore for each diretion. The one from direction 1 starst
+with -waiting_cars tokens and gains one every time a car passes from the other
+direction. The semaphore from the direction of the passing car loses one token. 
+
+The situation mirrors for the other semaphore.
+
+################################################################################
+Task 9 - complex_maintenance
+
+Atata s-a putut.
+
+################################################################################
+Task 10 - railroad
+
+* The car crosses the road it gets gueued
+* Whe car waits for all other cars to reach the barrier
+* The train message is printed only from the first car in queue
+* If the current car is the first in the queue, crosses and gets popped
