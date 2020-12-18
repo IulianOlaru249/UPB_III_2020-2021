@@ -1,0 +1,25 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+CHUCK_SIZE	examples/scatter_gather.c	6;"	d	file:
+GROUP_SIZE	ex6/ex6.c	5;"	d	file:
+MASTER	examples/mpi_hello.c	4;"	d	file:
+MULTI	ex3/ex3.c	5;"	d	file:
+ROOT	ex2/ex2.c	5;"	d	file:
+ROOT	ex3/ex3.c	6;"	d	file:
+ROOT	ex4/ex4.c	6;"	d	file:
+ROOT	ex5/ex5.c	5;"	d	file:
+ROOT	examples/scatter_gather.c	5;"	d	file:
+main	ex1/ex1.c	/^int main (int argc, char *argv[])$/;"	f
+main	ex2/ex2.c	/^int main (int argc, char *argv[])$/;"	f
+main	ex3/ex3.c	/^int main (int argc, char *argv[])$/;"	f
+main	ex4/ex4.c	/^int main (int argc, char *argv[])$/;"	f
+main	ex5/ex5.c	/^int main (int argc, char *argv[])$/;"	f
+main	ex6/ex6.c	/^int main (int argc, char *argv[])$/;"	f
+main	examples/example.c	/^int main (int argc, char *argv[])$/;"	f
+main	examples/mpi_hello.c	/^int main (int argc, char *argv[])$/;"	f
+main	examples/scatter_gather.c	/^int main (int argc, char **argv) {$/;"	f
+main	examples/send_recv_array.c	/^int main (int argc, char *argv[])$/;"	f
