@@ -1,0 +1,36 @@
+GRgrammar ::= Grammar (
+	nonterminals :: { S, S1, S2 } ;
+	alphabet :: { a, b } ;
+	start_symbol :: S ;
+
+	S -> a&S | b&S | a&S1 ;
+	S1 -> b&S2 | e ;
+	S2 -> a&S2 | aa ;
+) ;;
+
+GICgrammar ::= Grammar (
+	alphabet :: { a, b } ;
+	nonterminals :: { S, S2 } ;
+	start_symbol :: S ;
+
+	S -> a&S&a | b&S&b | S1;
+	S2 -> y&S1 | b&S1 | e ;
+) ;;
+
+GDCgrammar ::= Grammar (
+	alphabet :: { a, b } ;
+	nonterminals :: { S, S2 } ;
+	start_symbol :: S ;
+
+	S&a -> a&S&a | b&S&b | a&S1;
+	S2 -> y&S1 | b&S1 | S1 | e ;
+) ;;
+
+GFRgrammar ::= Grammar (
+	alphabet :: { a, b } ;
+	nonterminals :: { S, S2 } ;
+	start_symbol :: S ;
+
+	S&a -> a&S&a | b&S&b | S1;
+	a&S2&S -> y&S1 | b&S1 | e ;
+) ;;

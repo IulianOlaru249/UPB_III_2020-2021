@@ -1,0 +1,60 @@
+Numele automatului: automata1
+Tipul automatului: automat cu stiva
+Alfabetul de intrare: { a, b, c, d } 
+Numarul de stari: 5
+Starile finalae: { q4 }
+Starea initiala: q0
+Functia de tranzitie:
+	m(q0, y, z0) = (q1, X&Z0)
+	m(q1, a, X) = (q1, X&X)
+	m(q1, b, X) = (q2, e)
+	m(q2, b, X) = (q2, e)
+	m(q2, c, Z0) = (q3, X&Z0)
+	m(q3, c, X) = (q3, X&X)
+	m(q3, d, X) = (q4, e)
+	m(q4, d, X) = (q4, e)
+	m(q4, e, Z0) = (q4, Z0)
+
+Numele automatului: automata2
+Tipul automatului: automat cu stiva
+Alfabetul de intrare: { m, n, o, p } 
+Numarul de stari: 3
+Starile finalae: { q4, q0 }
+Starea initiala: q0
+Functia de tranzitie:
+	m(q0, y, z0) = (q1, X&Y1)
+	m(q1, m, X) = (q1, X&X)
+	m(q1, n, X) = (q2, e)
+	m(q2, n, X) = (q2, e)
+	m(q2, o, Y1) = (q3, X&Y1)
+
+Numele automatului: automata3
+Tipul automatului: automat cu stiva
+Alfabetul de intrare: { m, n, o, p } 
+Numarul de stari: 3
+Starile finalae: { }
+Starea initiala: q0
+Functia de tranzitie:
+	m(q0, y, z0) = (q1, X&Y1)
+	m(q1, m, X) = (q1, X&X)
+	m(q1, n, X) = (q2, e)
+	m(q2, o, X) = (q2, e)
+
+Numele automatului: automata4
+Tipul automatului: automat cu stiva
+Alfabetul de intrare: { m, n, o, p } 
+Numarul de stari: 1
+Starile finalae: { q0 }
+Starea initiala: q0
+Functia de tranzitie:
+	m(q0, y, z0) = (q1, X&Y1)
+
+Numele automatului: automata5
+Tipul automatului: automat cu stiva
+Alfabetul de intrare: { m, n, o, p } 
+Numarul de stari: 1
+Starea initiala: q0
+Starile finalae: {}
+Functia de tranzitie:
+	m(q0, y, z0) = (q1, X&Y1)
+

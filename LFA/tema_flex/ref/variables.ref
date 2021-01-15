@@ -1,0 +1,21 @@
+Numele gramaticii: GRgrammar
+Tipul gramaticii: GR
+Alfabetul gramaticii: { a, b } 
+
+Numele gramaticii: GICgrammar
+Tipul gramaticii: GIC
+Alfabetul gramaticii: { a, b } 
+
+Numele automatului: automata2
+Tipul automatului: automat cu stiva
+Alfabetul de intrare: { m, n, o, p } 
+Numarul de stari: 3
+Starile finalae: { q4, q0 }
+Starea initiala: q0
+Functia de tranzitie:
+	m(q0, y, z0) = (q1, X&Y1)
+	m(q1, m, X) = (q1, X&X)
+	m(q1, n, X) = (q2, e)
+	m(q2, n, X) = (q2, e)
+	m(q2, o, Y1) = (q3, X&Y1)
+

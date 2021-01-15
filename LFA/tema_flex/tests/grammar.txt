@@ -1,0 +1,13 @@
+grammar1 ::= Grammar (
+	nonterminals :: { S, S1, S2 } ;
+	alphabet :: { a, b, c } ;
+	start_symbol :: S ;
+
+	a&S -> y&S | a&S1 | S2 ;
+	S1 -> b&S2&S | e ;
+	S2 -> a&S2 | y ;
+	S2&a -> a&S2 | a | y ;
+	a&S2&a -> a&S2 | y ;
+	a&S2 -> a&S2 | y ;
+) ;;
+

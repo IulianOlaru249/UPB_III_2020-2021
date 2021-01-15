@@ -1,0 +1,33 @@
+automata1 ::=  PushDownAutomata (
+	alphabet :: { a, b, c, d } ;
+	stack_alphabet :: { Z0, X } ;
+	initial_state :: q0 ;
+	states :: { q0, q1, q2, q3, q4 } ; 
+	final_states :: { q4 } ;
+	variable y ::= { a, b } ;
+
+	q0 -> (
+		y, z0 / X&Z0 -> q1 ;
+	) ;
+
+	q1 -> (
+		a, X / X&X -> q1 ;
+		b, X / e -> q2 ;
+		a, X / X&X -> q1 ;
+	) ;
+	
+	q2 -> (
+		b, X / e -> q2 ;
+		c, Z0 / X&Z0 -> q3 ;
+	) ;
+	
+	q3 -> (
+		c, X / X&X -> q3 ;
+		d, X / e -> q4 ;
+	) ;
+
+	q4 -> (
+		d, X / e -> q4 ;
+		e, Z0 / Z0 -> q4 ;
+	) ;
+) ;;

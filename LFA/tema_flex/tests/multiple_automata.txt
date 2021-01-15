@@ -1,0 +1,105 @@
+automata1 ::=  PushDownAutomata (
+	alphabet :: { a, b, c, d } ;
+	stack_alphabet :: { Z0, X } ;
+	states :: { q0, q1, q2, q3, q4 } ; 
+	final_states :: { q4 } ;
+	initial_state :: q0 ;
+	variable y ::= { a, b } ;
+
+	q0 -> (
+		y, z0 / X&Z0 -> q1 ;
+	) ;
+
+	q1 -> (
+		a, X / X&X -> q1 ;
+		b, X / e -> q2 ;
+	) ;
+	
+	q2 -> (
+		b, X / e -> q2 ;
+		c, Z0 / X&Z0 -> q3 ;
+	) ;
+	
+	q3 -> (
+		c, X / X&X -> q3 ;
+		d, X / e -> q4 ;
+	) ;
+
+	q4 -> (
+		d, X / e -> q4 ;
+		e, Z0 / Z0 -> q4 ;
+	) ;
+) ;;
+
+automata2 ::=  PushDownAutomata (
+	alphabet :: { m, n, o, p } ;
+	stack_alphabet :: { Y1, X } ;
+	states :: { q0, q1, q2 } ; 
+	final_states :: { q4, q0 } ;
+	initial_state :: q0 ;
+	variable y ::= { a, b } ;
+
+	q0 -> (
+		y, z0 / X&Y1 -> q1 ;
+	) ;
+
+	q1 -> (
+		m, X / X&X -> q1 ;
+		n, X / e -> q2 ;
+	) ;
+	
+	q2 -> (
+		n, X / e -> q2 ;
+		o, Y1 / X&Y1 -> q3 ;
+	) ;
+	
+) ;;
+
+automata3 ::=  PushDownAutomata (
+	alphabet :: { m, n, o, p } ;
+	stack_alphabet :: { Y1, X } ;
+	states :: { q0, q1, q2 } ; 
+	final_states :: { } ;
+	initial_state :: q0 ;
+	variable y ::= { a, b } ;
+
+	q0 -> (
+		y, z0 / X&Y1 -> q1 ;
+	) ;
+
+	q1 -> (
+		m, X / X&X -> q1 ;
+		n, X / e -> q2 ;
+	) ;
+	
+	q2 -> (
+		o, X / e -> q2 ;
+	) ;
+) ;;
+
+automata4 ::=  PushDownAutomata (
+	alphabet :: { m, n, o, p } ;
+	stack_alphabet :: { Y1, X } ;
+	states :: { q0 } ; 
+	final_states :: { q0 } ;
+	initial_state :: q0 ;
+	variable y ::= { a, b } ;
+
+	q0 -> (
+		y, z0 / X&Y1 -> q1 ;
+	) ;
+
+) ;;
+
+automata5 ::=  PushDownAutomata (
+	alphabet :: { m, n, o, p } ;
+	stack_alphabet :: { Y1, X } ;
+	states :: { q0 } ; 
+	initial_state :: q0 ;
+	variable y ::= { a, b } ;
+
+	q0 -> (
+		y, z0 / X&Y1 -> q1 ;
+	) ;
+
+) ;;

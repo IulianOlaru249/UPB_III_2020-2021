@@ -1,0 +1,83 @@
+variable x ::= { a, b } ;
+%grammarFromTHESKYYYYY ::= Grammar (
+variable z ::= { a, b } ;
+
+grammar1 ::= Grammar (
+	nonterminals :: { S, S1, S2 } ;
+	alphabet :: { a, b, c } ;
+	start_symbol :: S ;
+
+	S -> y&S | a&S1 ;
+	S1 -> b&S2 | e ;
+	S2 -> a&S2 | y ;
+) ;;
+
+/*
+	This is a comment on multiple lines
+*/
+
+variable a ::= { a, b, c };
+% automata1 
+automata1 ::=  PushDownAutomata (
+	alphabet :: { a, b, c, d } ;
+	stack_alphabet :: { Z0, X } ;
+	states :: { q0, q1, q2, q3, q4 } ; 
+	final_states :: { q4 } ;
+	initial_state :: q0 ;
+	variable y ::= { a, b } ;
+
+	q0 -> (
+		y, z0 / X&Z0 -> q1 ;
+	) ;
+
+	q1 -> (
+		a, X / X&X -> q1 ;
+		b, X / e -> q2 ;
+	) ;
+	
+	q2 -> (
+		b, X / e -> q2 ;
+		c, Z0 / X&Z0 -> q3 ;
+	) ;
+	
+	q3 -> (
+		c, X / X&X -> q3 ;
+		d, X / e -> q4 ;
+	) ;
+
+	q4 -> (
+		d, X / e -> q4 ;
+		e, Z0 / Z0 -> q4 ;
+	) ;
+) ;;
+
+% ana are mere
+% shame
+
+GDCgrammar ::= Grammar (
+	alphabet :: { a, b } ;
+	nonterminals :: { S, S2 } ;
+	start_symbol :: S ;
+    variable z ::= { a, b, c };
+
+	S&a -> a&S&a | b&S&b | a&S1;
+	S2 -> y&S1 | b&S1 | S1 | e ;
+) ;;
+
+automata4 ::=  PushDownAutomata (
+	alphabet :: { m, n, o, p } ;
+	stack_alphabet :: { Y1, X } ;
+	states :: { q0 } ; 
+	final_states :: { q0 } ;
+	initial_state :: q0 ;
+	variable y ::= { a, b } ;
+
+	q0 -> (
+		y, z0 / X&Y1 -> q1 ;
+	) ;
+
+) ;;
+
+/*
+	This is a comment on multiple lines
+*/
