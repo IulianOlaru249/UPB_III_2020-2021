@@ -1,0 +1,75 @@
+Homework 3
+APD
+Olaru Gabriel Iulian 334CC
+
+******************************************************************************
+Structure
+******************************************************************************
+
+main: starts each MPI node and calls appropriate handler
+
+helpers: implementation of handlers for each type of node and 
+    some auxiliary functions.
+
+helpers.h: description of each function and each structure
+
+******************************************************************************
+Proggram Flow
+******************************************************************************
+
+The main function opens all the MPI nodes with the specific handler.
+The MPI nodes:
+    + MASTER:
+        * opens one thread for each type of paragraph
+        * each thread reads the paragraphs they are required to process
+        based on their id (each id represents a type of worker)
+        * each thread sends paragraphs to the workers
+        * each thread receives back processed paragraphs
+        * each thread puts the processed paragraphs back in order
+        with a sliding window:
+            - keep track of the id of the last printed paragraph
+            (ids go from 1 to n and represent the order the paragraphs are
+            found in the file).
+            - when a message arrives, store it in a map with the id as a key
+            - while you find the paragraph you wish to print it in the map,
+            print it and erase it.
+
+    + WORKERS:
+        * opens one thread to receive paragraphs from MASTER (thread 0)
+        * thread 0 breaks paragraph into 20 lines chunks
+        * thread 0 opens the required number of threads for processing
+            - each thread splits the chunks array into equal sizes
+            - each thread processed it's chunks based on the type of worker
+        * thread 0 recomposes the processed paragraph
+        * thread 0 sends paragraph back to master
+
+******************************************************************************
+Scalability
+******************************************************************************
+
+Tests:
+    * input1.txt lines: 20
+      linear: Test input1.txt took 0.001669168472290039 seconds
+      paralel: Test input1.txt took 0.3149375915527344 seconds
+
+    * input2.txt lines: 6351
+      linear: Test input2.txt took 0.10288786888122559 seconds
+      paralel: Test input2.txt took 0.416456937789917 seconds
+
+    * input3.txt lines: 19188
+      linear: Test input3.txt took 0.3085920810699463 seconds
+      paralel: Test input3.txt took 0.4154212474822998 seconds
+
+    * input4.txt lines: 351298
+      linear: Test input4.txt took 5.3562376499176025 seconds
+      paralel: Test input4.txt took 0.9683387279510498 seconds
+
+    * input5.txt lines: 505668
+      linear: Test input5.txt took 8.931881904602051 seconds
+      paralel: Test input5.txt took 1.4226090908050537 seconds
+
+The algorithm has a roughly constant execution time for small size texts.
+It grows linearly with the size of the input text, as opposed to the much
+bigger growth rate of the linear solution.
+The paralel solution is 15.7% faster that the serial solution for big texts.
+This results prove the scalability of the algorithm.

@@ -1,0 +1,415 @@
+#include "helpers.h"
+
+void send_message(int destination_id, void *message, int message_len, int type)
+{
+    /* Handle integer messaes */
+    if (type == INT_MESSAGE) {
+        int *payload = (int*) message;
+        MPI_Send(payload, 1, MPI_INT, destination_id, 0, MPI_COMM_WORLD);
+    }
+
+    /* Handle string messsages */
+    if (type == STRING_MESSAGE) {
+        char *payload = (char *)message;
+
+        /* Send payload length then payload */
+        MPI_Send(&message_len, 1, MPI_INT, destination_id, 0, MPI_COMM_WORLD);
+        MPI_Send(payload, message_len, MPI_CHAR, destination_id, 0, MPI_COMM_WORLD);
+    }
+}
+
+int receive_message(int source_id, void *message, int message_len, int type)
+{
+    MPI_Status status;
+
+    /* Handle int messages */
+    if (type == INT_MESSAGE) {
+        int payload_len;
+        MPI_Recv(&payload_len, 1, MPI_INT, source_id, 0, MPI_COMM_WORLD, &status);
+        message = NULL;
+        return payload_len;
+    }
+
+    /* Handle string messages */
+    if (type = STRING_MESSAGE) {
+        MPI_Recv(message, message_len, MPI_CHAR, source_id, 0, MPI_COMM_WORLD, &status);
+        return message_len;
+    }
+}
+
+int get_paragraph(string &paragraph, ifstream &file, int &paragraph_id)
+{
+    int number_of_lines = 0;
+    string line = "";
+    paragraph = "";
+
+    do {
+        getline (file, line);
+        paragraph += line + "\n";
+        number_of_lines ++;
+    } while (!line.empty() && !file.eof());
+
+    paragraph[paragraph.length() - 1] = '\0';
+
+    if(number_of_lines != 1 && number_of_lines != 0)
+        number_of_lines --;
+
+
+    return number_of_lines;
+}
+
+void handle_master(char *input_file)
+{
+    /* Initiate and open output file */
+    string out_file_name(input_file);
+    out_file_name = "./tests/in/" + out_file_name.substr(11, 6) + ".out";
+    out_file.open(out_file_name);
+
+    vector<master_thread_params> masater_params(MASTER_THREADS_COUNT);
+    pthread_mutex_init(&lock, NULL);
+
+    /* Initiate master threads */
+    pthread_t tid[MASTER_THREADS_COUNT];
+    for (int i = 0; i < MASTER_THREADS_COUNT; i++) {
+        /* Set master thread params */
+        masater_params[i].thread_id = i + 1;
+        masater_params[i].file_name = input_file;
+        
+        pthread_create(&tid[i], NULL, master_thread_function, &masater_params[i]);
+    }
+
+    /* Join master threads */
+    for (int i = 0; i < MASTER_THREADS_COUNT; i++) {
+	    pthread_join(tid[i], NULL);
+	}
+    
+    out_file.close();
+}
+
+void *master_thread_function (void *arg)
+{
+    /* Get params */
+    master_thread_params *params = (master_thread_params*) arg;
+
+    int paragraph_id = 0;
+    int num_of_lines = 0;
+    bool got_paragraph = false;
+    string line = "";
+    string paragraph = "";
+
+    /* Open file and read */
+    ifstream in_file;
+    in_file.open(params->file_name);
+
+    while (true) {
+        getline (in_file, line);
+
+        got_paragraph = false;
+        if (line.empty() || in_file.eof())
+            paragraph_id++;
+
+        /* Handle horror paragraphs */
+        if (line == "horror" && params->thread_id == HORROR) {
+            num_of_lines = get_paragraph(paragraph, in_file, paragraph_id);
+            got_paragraph = true;
+        }
+
+        /* Handle comedy paragraphs */
+        if (line == "comedy" && params->thread_id == COMEDY) {
+            num_of_lines = get_paragraph(paragraph, in_file, paragraph_id);
+            got_paragraph = true;
+        }
+
+        /* Handle fantasy paragraphs */
+        if (line == "fantasy" && params->thread_id == FANTASY) {
+            num_of_lines = get_paragraph(paragraph, in_file, paragraph_id);
+            got_paragraph = true;
+        }
+
+        /* Handle science_fiction paragraphs */
+        if (line == "science-fiction" && params->thread_id == SCIENCE_FICTION) {
+            num_of_lines = get_paragraph(paragraph, in_file, paragraph_id);
+            got_paragraph = true;
+        }
+
+        if (got_paragraph) {
+            /* Send paragraph to be processed, lines and id */
+            send_message(params->thread_id, (char *)paragraph.c_str(), paragraph.length(), STRING_MESSAGE);
+            send_message(params->thread_id, &num_of_lines, 1, INT_MESSAGE);
+            send_message(params->thread_id, &paragraph_id, 1, INT_MESSAGE);
+
+            /* Receive processed paragraphs */
+            char *processed_paragraph = NULL;
+            int processed_paragraph_len = 0;
+            int packet_id = -1;
+            int paragraph_type_id = -1;
+            string paragraph_type = "";
+
+            processed_paragraph_len = receive_message(params->thread_id, (void *)processed_paragraph, 1, INT_MESSAGE);
+            processed_paragraph = (char*) malloc(processed_paragraph_len * sizeof( char));
+            processed_paragraph_len = receive_message(params->thread_id, (void*)processed_paragraph, processed_paragraph_len, STRING_MESSAGE);
+            num_of_lines = receive_message(params->thread_id, NULL, 1, INT_MESSAGE);
+            packet_id = receive_message(params->thread_id, NULL, 1, INT_MESSAGE);
+            paragraph_type_id = receive_message(params->thread_id, NULL, 1, INT_MESSAGE);
+
+            if(paragraph_type_id == HORROR) paragraph_type = "horror";
+            if(paragraph_type_id == COMEDY) paragraph_type = "comedy";
+            if(paragraph_type_id == FANTASY) paragraph_type = "fantasy";
+            if(paragraph_type_id == SCIENCE_FICTION) paragraph_type = "science-fiction";
+
+            /* Store in sliding window and print in correct order */
+			pthread_mutex_lock(&lock);
+            sliding_window[paragraph_id] = make_pair(paragraph_type, processed_paragraph);
+            while(sliding_window.find(last_printed) != sliding_window.end()) {
+                out_file << sliding_window[last_printed].first << "\n" << sliding_window[last_printed].second << "\n";
+                free(sliding_window[last_printed].second);
+                sliding_window.erase(last_printed);
+                last_printed++;
+            }
+			pthread_mutex_unlock(&lock);
+
+            paragraph_id++;
+        }
+
+        /* Tell worker the job is done */
+        if (in_file.eof()) {
+            int done_signal = -1;
+            send_message(params->thread_id, &done_signal, 1, INT_MESSAGE);
+            break;
+        }
+    }
+    in_file.close();
+    pthread_exit(NULL);
+}
+
+void handle_worker(int worker_type)
+{
+    vector<worker_thread_params> worker_params(cores);
+
+    /* Initiate worker reading thread */
+    pthread_t tid[cores];
+    /* Set worker thread params */
+    worker_params[0].thread_id = 0;
+    worker_params[0].worker_type = worker_type;
+    pthread_create(&tid[0], NULL, worker_thread_function, &worker_params[0]);
+
+    /* Join worker reading thread */
+	pthread_join(tid[0], NULL);
+}
+
+void *worker_thread_function (void *arg)
+{
+    /* Get params */
+    worker_thread_params *params = (worker_thread_params*) arg;
+
+    /* Thread responsible for getting messages */
+    if (params->thread_id == 0) {
+        int paragraph_len = 0;
+        int number_of_lines = 0;
+        int packet_id = -1;
+        char *paragraph = NULL;
+
+        while (true) {
+            /* Get paragraph length */
+            paragraph_len = receive_message(MASTER, (void *)paragraph, 1, INT_MESSAGE);
+
+            /* Check for EOF signal from master */
+            if (paragraph_len == -1)
+                break;
+
+            /* Get paragraph and number of lines and packet id */
+            paragraph = (char *) malloc (paragraph_len * sizeof( char));
+            paragraph_len = receive_message(MASTER, (void*)paragraph, paragraph_len, STRING_MESSAGE);
+            number_of_lines = receive_message(MASTER, NULL, 1, INT_MESSAGE);
+            packet_id = receive_message(MASTER, NULL, 1, INT_MESSAGE);
+
+            string processed_paragraph(paragraph);
+
+            /* Break paragraph in chunks of 20 lines each */
+            vector<string> chunks;
+            int number_of_chunks = break_in_chunks(chunks, processed_paragraph);
+            int worker_cores = cores - 1;
+            /* Make shure at most P - 1 threads are used */
+            if (number_of_chunks < worker_cores)
+                worker_cores = number_of_chunks;
+
+            /* Begin threads for processing */
+            vector<worker_thread_params> worker_params(worker_cores + 1);
+            pthread_t tid[worker_cores + 1];
+
+            /* Initiate worker threads that process text */
+            for (int i = 1; i <= worker_cores; i++) {
+                /* Set worker thread params */
+                worker_params[i].thread_id = i;
+                worker_params[i].worker_type = params->worker_type;
+                worker_params[i].number_of_chunks = number_of_chunks;
+                worker_params[i].number_of_cores = worker_cores;
+                worker_params[i].chunks = &chunks;
+                pthread_create(&tid[i], NULL, worker_thread_function, &worker_params[i]);
+            }
+
+            /* join worker threads */
+            for (int i = 1; i <= worker_cores; i++) {
+                pthread_join(tid[i], NULL);
+            }
+
+            /* Recompose paragraph */
+            processed_paragraph = "";
+            for(auto chunk : chunks)
+                processed_paragraph += chunk;
+            paragraph_len = processed_paragraph.length() + 1;
+
+            /* Send back processed paragraph */
+            send_message(MASTER, (void*)processed_paragraph.c_str(), paragraph_len, STRING_MESSAGE);
+            send_message(MASTER, &number_of_lines, 1, INT_MESSAGE);
+            send_message(MASTER, &packet_id, 1, INT_MESSAGE);
+            send_message(MASTER, &params->worker_type, 1, INT_MESSAGE);
+
+            free (paragraph);
+            paragraph = NULL;
+        }
+    }
+
+    /* If this is a worker thread oter that the one who reads */
+    if (params->thread_id != 0) {
+        int start = (params->thread_id - 1) * (double)params->number_of_chunks / params->number_of_cores;
+	    int end = min((params->thread_id) * (double)params->number_of_chunks / params->number_of_cores, (double)params->number_of_chunks);
+
+        int paragraph_len;
+        for (int i = start; i < end; i++) {
+            /* Process paragraph */
+            switch(params->worker_type) {
+                case HORROR:
+                    process_horror_paragraph((*(params->chunks))[i]);
+                    break;
+                case COMEDY:
+                    process_comedy_paragraph((*(params->chunks))[i]);
+                    break;
+                case FANTASY:
+                    process_fantasy_paragraph((*(params->chunks))[i]);
+                    break;
+                case SCIENCE_FICTION:
+                    process_science_fiction_paragraph((*(params->chunks))[i]);
+                    break;
+            }
+        }
+    }
+
+    pthread_exit(NULL);
+}
+
+void process_horror_paragraph(string &paragraph)
+{
+    string result = "";
+    for (char &letter : paragraph) {
+        result += letter;
+        if (!is_vowel(letter) && isalpha(letter)) {
+            if (isupper(letter)) {
+                result += tolower(letter);
+            }
+            else {
+                result += letter;
+            }
+        }
+    }
+    paragraph = result;
+}
+
+void process_comedy_paragraph(string &paragraph)
+{
+    char prev_letter = '-';
+    int position = 0;
+    for (char &letter : paragraph) {
+        if(prev_letter == ' ' || prev_letter == '\n') {
+                position = 0;
+        }
+
+        if (position % 2) {
+            if(isalpha(letter)) {
+                letter = toupper(letter);
+            }
+        }
+
+        position++;
+        prev_letter = letter;
+    }
+}
+
+void process_fantasy_paragraph(string &paragraph)
+{
+    char prev_letter = ' ';
+    for (char &letter : paragraph) {
+        if(prev_letter == ' ' || prev_letter == '\n') {
+            letter = toupper(letter);
+        }
+        prev_letter = letter;
+    }
+}
+
+void process_science_fiction_paragraph(string &paragraph)
+{
+    int count = 0;
+    string line;
+    string word;
+    string result = "";
+    stringstream check1(paragraph);
+
+    while(getline(check1, line, '\n')) {
+        count = 0;
+        stringstream check2(line);
+        while(getline(check2, word, ' ')){
+            count ++;
+            if (count == 7) {
+                int len = word.size();
+                for (int i = 0; i < len / 2; i++) 
+                    swap(word[i], word[len - i - 1]);
+                count = 0;
+            }
+            result += word + " ";
+        }
+        result += "\n";
+    }
+
+    paragraph = result;
+}
+
+bool is_vowel(char letter)
+{
+    if (letter == 'a' || letter == 'e' || letter == 'i' ||
+            letter == 'o' || letter == 'u')
+        return true;
+
+    if (letter == 'A' || letter == 'E' || letter == 'I' ||
+            letter == 'O' || letter == 'U')
+        return true;
+
+    return false;
+}
+
+int break_in_chunks(vector<string>& chunks, string &paragraph)
+{
+    string chunk = "";
+    string line;
+    stringstream check1(paragraph);
+    int count = 0;
+
+    while(true) {
+        getline(check1, line, '\n');
+
+        if(check1.eof()) {
+            chunk += line;
+            chunks.push_back(chunk);
+            break;
+        } else {
+            count++;
+            chunk += line + "\n";
+            if (count == 20) {
+                chunks.push_back(chunk);
+                chunk = "";
+                count = 0;
+            }
+        }
+    }
+
+    return chunks.size();
+}
