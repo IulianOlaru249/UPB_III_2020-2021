@@ -1,0 +1,48 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+COMEDY	helpers.h	/^    COMEDY,$/;"	e	enum:MPI_NODES
+FANTASY	helpers.h	/^    FANTASY,$/;"	e	enum:MPI_NODES
+HELPERS_H	helpers.h	2;"	d
+HORROR	helpers.h	/^    HORROR,$/;"	e	enum:MPI_NODES
+INT_MESSAGE	helpers.h	/^    INT_MESSAGE,$/;"	e	enum:MESSAGE_TYPES
+MASTER	helpers.h	/^    MASTER,$/;"	e	enum:MPI_NODES
+MASTER_THREADS_COUNT	helpers.h	21;"	d
+MESSAGE_TYPES	helpers.h	/^enum MESSAGE_TYPES {$/;"	g
+MPI_NODES	helpers.h	/^enum MPI_NODES { $/;"	g
+SCIENCE_FICTION	helpers.h	/^    SCIENCE_FICTION$/;"	e	enum:MPI_NODES
+STRING_MESSAGE	helpers.h	/^    STRING_MESSAGE$/;"	e	enum:MESSAGE_TYPES
+_master_thread_params	helpers.h	/^typedef struct _master_thread_params {$/;"	s
+_worker_thread_params	helpers.h	/^typedef struct _worker_thread_params {$/;"	s
+barrier	main.cpp	/^pthread_barrier_t barrier;$/;"	v
+break_in_chunks	helpers.cpp	/^int break_in_chunks(vector<string>& chunks, string &paragraph)$/;"	f
+chunks	helpers.h	/^    vector<string>* chunks;$/;"	m	struct:_worker_thread_params
+cores	main.cpp	/^int cores = sysconf(_SC_NPROCESSORS_CONF);$/;"	v
+file_name	helpers.h	/^    char *file_name;$/;"	m	struct:_master_thread_params
+get_paragraph	helpers.cpp	/^int get_paragraph(string &paragraph, ifstream &file, int &paragraph_id)$/;"	f
+handle_master	helpers.cpp	/^void handle_master(char *input_file)$/;"	f
+handle_worker	helpers.cpp	/^void handle_worker(int worker_type)$/;"	f
+is_vowel	helpers.cpp	/^bool is_vowel(char letter)$/;"	f
+last_printed	main.cpp	/^int last_printed = 0;$/;"	v
+lock	main.cpp	/^pthread_mutex_t lock;$/;"	v
+main	main.cpp	/^int main (int argc, char *argv[])$/;"	f
+master_thread_function	helpers.cpp	/^void *master_thread_function (void *arg)$/;"	f
+master_thread_params	helpers.h	/^} master_thread_params;$/;"	t	typeref:struct:_master_thread_params
+number_of_chunks	helpers.h	/^    int number_of_chunks;$/;"	m	struct:_worker_thread_params
+number_of_cores	helpers.h	/^    int number_of_cores;$/;"	m	struct:_worker_thread_params
+out_file	main.cpp	/^ofstream out_file;$/;"	v
+process_comedy_paragraph	helpers.cpp	/^void process_comedy_paragraph(string &paragraph)$/;"	f
+process_fantasy_paragraph	helpers.cpp	/^void process_fantasy_paragraph(string &paragraph)$/;"	f
+process_horror_paragraph	helpers.cpp	/^void process_horror_paragraph(string &paragraph)$/;"	f
+process_science_fiction_paragraph	helpers.cpp	/^void process_science_fiction_paragraph(string &paragraph)$/;"	f
+receive_message	helpers.cpp	/^int receive_message(int source_id, void *message, int message_len, int type)$/;"	f
+send_message	helpers.cpp	/^void send_message(int destination_id, void *message, int message_len, int type)$/;"	f
+sliding_window	main.cpp	/^map<int, pair<string, char*>> sliding_window;$/;"	v
+thread_id	helpers.h	/^    int thread_id;$/;"	m	struct:_master_thread_params
+thread_id	helpers.h	/^    int thread_id;$/;"	m	struct:_worker_thread_params
+worker_thread_function	helpers.cpp	/^void *worker_thread_function (void *arg)$/;"	f
+worker_thread_params	helpers.h	/^} worker_thread_params;$/;"	t	typeref:struct:_worker_thread_params
+worker_type	helpers.h	/^    int worker_type;$/;"	m	struct:_worker_thread_params
