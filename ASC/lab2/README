@@ -1,0 +1,28 @@
+Ex 1 + 2:
+
+Putem observa modurile de creere al unui thread in python.
+    ex1: definirea unei functii care expliciteaza comportamentul
+            thread-ului la rulare.
+    ex2: mostenirea clasei thread si implementarea metodei abstacte run,
+            care descire comportamentul thread-ului la runtime
+
+
+Ex 3:
+
+Putem observa comportamentul unui lock.
+Pentru a putea face safe (evitam race conditions) operatiile de add
+si sub asupra elementelor unei liste. Lock-urile asigura ca 2 threaduri
+nu vor executa concurent operatii asupa aceleiasi zone de memorie.
+
+
+Ex 4:
+
+RLock este asemanator cu Lock, doar ca putem da aquire de oricate ori 
+din cadrul aceluiasi thread
+
+Ex 5:
+
+Putem observa comportamentul unui semafor. Se comporta ca un lock
+care incepe cu mai multe token-uri. Thread-urile pot da atatea aquire
+cate token-uri are semaforul. Semaforul permite N thread-uri sa execute
+operatii concurent.
