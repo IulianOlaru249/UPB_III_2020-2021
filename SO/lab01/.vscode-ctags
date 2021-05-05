@@ -1,0 +1,80 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+ARRAY_MAX_SIZE	skel/lin/4-gdb/fault.c	13;"	d	file:
+A_NUMBER	skel/lin/3-ops/ops.c	16;"	d	file:
+A_NUMBER	skel/win/2-debug/main.c	15;"	d	file:
+BASENAME	refcard/Makefile	/^BASENAME=02$/;"	m
+BASENAME	slides/Makefile	/^BASENAME = 01$/;"	m
+B_NUMBER	skel/lin/3-ops/ops.c	17;"	d	file:
+B_NUMBER	skel/win/2-debug/main.c	16;"	d	file:
+CC	skel/lin/3-ops/Makefile	/^CC = gcc$/;"	m
+CC	skel/lin/4-gdb/Makefile	/^CC = gcc$/;"	m
+CC	skel/lin/5-linker/Makefile	/^CC = gcc$/;"	m
+CFLAGS	skel/lin/3-ops/Makefile	/^CFLAGS = -Wall$/;"	m
+CFLAGS	skel/lin/4-gdb/Makefile	/^CFLAGS = -Wall -g$/;"	m
+CFLAGS	skel/lin/5-linker/Makefile	/^CFLAGS = -Wall -g$/;"	m
+CODE_DIR	slides/Makefile	/^CODE_DIR = code$/;"	m
+C_HIGHLIGHT_OPTS	slides/code/Makefile	/^	C_HIGHLIGHT_OPTS = -L -l -f -t 8 -K tiny -S c -c highlight.sty$/;"	m
+C_HIGHLIGHT_OPTS	slides/code/Makefile	/^	C_HIGHLIGHT_OPTS = -O latex -l -f -t 8 -K tiny -S c -c highlight.sty$/;"	m
+Dprintf	skel/win/2-debug/add.h	17;"	d
+Dprintf	skel/win/2-debug/add.h	21;"	d
+FIRST_NUMBER	skel/win/3-bounds/bounds.c	13;"	d	file:
+HIGHLIGHT	slides/Makefile	/^HIGHLIGHT = tex\/code$/;"	m
+LDLIBS	skel/lin/3-ops/Makefile	/^LDLIBS = -lm$/;"	m
+MK_HIGHLIGHT_OPTS	slides/code/Makefile	/^	MK_HIGHLIGHT_OPTS = -L -l -f -t 8 -K tiny -S Make -c highlight.sty$/;"	m
+MK_HIGHLIGHT_OPTS	slides/code/Makefile	/^	MK_HIGHLIGHT_OPTS = -O latex -l -f -t 8 -K tiny -S Make -c highlight.sty$/;"	m
+OUT_DIR	refcard/Makefile	/^OUT_DIR = texfiles$/;"	m
+OUT_DIR	slides/Makefile	/^OUT_DIR = texfiles$/;"	m
+PDF	refcard/Makefile	/^	PDF = $(addprefix lab, $(addsuffix -refcard.pdf, $(notdir $(BASENAME))))$/;"	m
+PDF	refcard/Makefile	/^	PDF = $(addsuffix .pdf, $(BASENAME))$/;"	m
+PDF	slides/Makefile	/^	PDF = $(addprefix lab, $(addsuffix -slides.pdf, $(notdir $(BASENAME))))$/;"	m
+PDF	slides/Makefile	/^	PDF = $(addsuffix .pdf, $(BASENAME))$/;"	m
+PDFLATEX	refcard/Makefile	/^PDFLATEX = pdflatex$/;"	m
+PDFLATEX	slides/Makefile	/^PDFLATEX = pdflatex$/;"	m
+SECOND_NUMBER	skel/win/3-bounds/bounds.c	14;"	d	file:
+STY_DIR	refcard/Makefile	/^STY_DIR = ..\/..\/sty$/;"	m
+STY_DIR	slides/Makefile	/^STY_DIR = ..\/..\/sty$/;"	m
+TEX	refcard/Makefile	/^	TEX = $(addprefix lab, $(addsuffix -refcard.tex, $(notdir $(BASENAME))))$/;"	m
+TEX	refcard/Makefile	/^	TEX = $(addsuffix .tex, $(BASENAME))$/;"	m
+TEX	slides/Makefile	/^	TEX = $(addprefix lab, $(addsuffix -slides.tex, $(notdir $(BASENAME))))$/;"	m
+TEX	slides/Makefile	/^	TEX = $(addsuffix .tex, $(BASENAME))$/;"	m
+TEXFILES	slides/code/Makefile	/^TEXFILES = hw.tex myMakefile.tex$/;"	m
+TEXINPUTS	refcard/Makefile	/^	TEXINPUTS=$(STY_DIR)\/\/: $(PDFLATEX) -output-directory $(OUT_DIR) $<$/;"	m
+TEXINPUTS	slides/Makefile	/^	TEXINPUTS=$(STY_DIR)\/\/: $(PDFLATEX) -output-directory $(OUT_DIR) $<$/;"	m
+_ADD_H	skel/lin/3-ops/add.h	12;"	d
+_ADD_H	skel/win/2-debug/add.h	12;"	d
+_HEXDUMP_H	skel/lin/2-lib/hexdump.h	11;"	d
+_MUL_H	skel/lin/3-ops/mul.h	12;"	d
+add	skel/lin/3-ops/add.c	/^int add(int a, int b)$/;"	f
+add	skel/win/2-debug/add.c	/^int add(int a, int b)$/;"	f
+bug	skel/win/VS Tutorial/debug.c	/^int *bug;$/;"	v
+data	skel/lin/2-lib/hexdump.h	/^	__u8 data[32];$/;"	m	struct:xframe
+f	skel/win/VS Tutorial/debug.c	/^void f(int a, int b)$/;"	f
+generate_frame	skel/lin/2-lib/sample.c	/^void generate_frame(struct xframe *frame)$/;"	f
+get_max	skel/win/3-bounds/bounds.c	/^__declspec(dllimport) int get_max(int a, int b);$/;"	v
+hex_asc	skel/lin/2-lib/hexdump.c	/^const char hex_asc[] = "0123456789abcdef";$/;"	v
+hex_asc_hi	skel/lin/2-lib/hexdump.c	19;"	d	file:
+hex_asc_lo	skel/lin/2-lib/hexdump.c	18;"	d	file:
+hex_dump_to_buffer	skel/lin/2-lib/hexdump.c	/^void hex_dump_to_buffer(const void *buf, size_t len, int rowsize,$/;"	f
+inv_sum	skel/lin/4-gdb/fault.c	/^double inv_sum(int v[], int n)$/;"	f
+len	skel/lin/2-lib/hexdump.h	/^	__u8 len;$/;"	m	struct:xframe
+main	skel/lin/1-hello/hello.c	/^int main(void)$/;"	f
+main	skel/lin/2-lib/main.c	/^int main(void)$/;"	f
+main	skel/lin/3-ops/ops.c	/^int main(void)$/;"	f
+main	skel/lin/4-gdb/fault.c	/^int main(void)$/;"	f
+main	skel/lin/5-linker/main.c	/^int main(void)$/;"	f
+main	skel/win/1-hello/hello.c	/^int main(void)$/;"	f
+main	skel/win/2-debug/main.c	/^int main(void)$/;"	f
+main	skel/win/3-bounds/bounds.c	/^int main(void)$/;"	f
+main	skel/win/VS Tutorial/debug.c	/^int main(void)$/;"	f
+main	slides/code/hw.c	/^int main(void)$/;"	f
+mul	skel/lin/3-ops/mul.c	/^int mul(int a, int b)$/;"	f
+print_array	skel/lin/4-gdb/fault.c	/^void print_array(int v[], int n)$/;"	f
+scnprintf	skel/lin/2-lib/hexdump.c	/^int scnprintf(char *buf, size_t size, const char *fmt, ...)$/;"	f
+show_inv	skel/lin/4-gdb/fault.c	/^void show_inv(int v[], int n)$/;"	f
+str	skel/lin/5-linker/str.c	/^char *str = "SO";$/;"	v
+xframe	skel/lin/2-lib/hexdump.h	/^struct xframe {$/;"	s

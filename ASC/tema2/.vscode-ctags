@@ -1,0 +1,51 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+CC	Makefile	/^CC=gcc$/;"	m
+CFLAGS	Makefile	/^CFLAGS=-Wall -Werror -O0$/;"	m
+LIBDIRS	Makefile	/^LIBDIRS=-L\/usr\/lib64\/atlas$/;"	m
+LIBS	Makefile	/^LIBS=-lsatlas$/;"	m
+MAX_BONUS	main.c	17;"	d	file:
+N	utils.h	/^	int N;$/;"	m	struct:test
+RANGE	main.c	20;"	d	file:
+SAFE_ASSERT	main.c	22;"	d	file:
+Solver	utils.h	/^typedef double* (*Solver)(int, double *, double*);$/;"	t
+add	solver_blas.c	/^double *add(int N, double *A, double *B)$/;"	f
+add	solver_neopt.c	/^double *add(int N, double *A, double *B)$/;"	f
+add	solver_opt.c	/^double *add(int N, double *A, double *B)$/;"	f
+alloc_matrix	solver_blas.c	/^double *alloc_matrix(int N)$/;"	f
+alloc_matrix	solver_neopt.c	/^double *alloc_matrix(int N)$/;"	f
+alloc_matrix	solver_opt.c	/^double *alloc_matrix(int N)$/;"	f
+check_err	compare.c	16;"	d	file:
+cmp_files	compare.c	/^int cmp_files(char const *file_path1, char const *file_path2, double precision) {$/;"	f
+free_matrix	solver_blas.c	/^void free_matrix(double *A)$/;"	f
+free_matrix	solver_neopt.c	/^void free_matrix(double *A)$/;"	f
+free_matrix	solver_opt.c	/^void free_matrix(double *A)$/;"	f
+generate_data	main.c	/^int generate_data(struct test t, double **A, int triangular)$/;"	f
+get_rand_double	utils.h	13;"	d
+main	compare.c	/^int main(int argc, const char **argv)$/;"	f
+main	main.c	/^int main(int argc, char **argv) {$/;"	f
+min	solver_blas.c	/^int min(int i, int j)$/;"	f
+min	solver_neopt.c	/^int min(int i, int j)$/;"	f
+min	solver_opt.c	/^int min(int i, int j)$/;"	f
+multiply	solver_blas.c	/^double *multiply(int N, double *A, double *B)$/;"	f
+multiply	solver_neopt.c	/^double *multiply(int N, double *A, double *B)$/;"	f
+multiply	solver_opt.c	/^double *multiply(int N, double *A, double *B)$/;"	f
+multiply_with_transpose_left	solver_blas.c	/^double *multiply_with_transpose_left(int N, double *A, double *At)$/;"	f
+multiply_with_transpose_left	solver_neopt.c	/^double *multiply_with_transpose_left(int N, double *A, double *At)$/;"	f
+multiply_with_transpose_left	solver_opt.c	/^double *multiply_with_transpose_left(int N, double *A, double *At)$/;"	f
+multiply_with_transpose_right	solver_blas.c	/^double *multiply_with_transpose_right(int N, double *A, double *At)$/;"	f
+multiply_with_transpose_right	solver_neopt.c	/^double *multiply_with_transpose_right(int N, double *A, double *At)$/;"	f
+multiply_with_transpose_right	solver_opt.c	/^double *multiply_with_transpose_right(int N, double *A, double *At)$/;"	f
+my_solver	solver_blas.c	/^double* my_solver(int N, double *A, double *B) {$/;"	f
+my_solver	solver_neopt.c	/^double* my_solver(int N, double *A, double *B) {$/;"	f
+my_solver	solver_opt.c	/^double* my_solver(int N, double *A, double *B) {$/;"	f
+output_save_file	utils.h	/^	char output_save_file[100];$/;"	m	struct:test
+read_input_file	main.c	/^int read_input_file(char *input_file, int *num_tests, struct test **tests)$/;"	f
+run_test	main.c	/^int run_test(struct test t, Solver solve, float *elapsed)$/;"	f
+seed	utils.h	/^	int seed;$/;"	m	struct:test
+test	utils.h	/^struct test {$/;"	s
+write_cmat_file	main.c	/^int write_cmat_file(char *filepath, int N, double *data) {$/;"	f

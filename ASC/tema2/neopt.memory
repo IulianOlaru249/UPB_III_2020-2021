@@ -1,0 +1,83 @@
+==88271== Memcheck, a memory error detector
+==88271== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==88271== Using Valgrind-3.14.0-353a3587bb-20181007X and LibVEX; rerun with -h for copyright info
+==88271== Command: ./tema2_neopt /export/asc/tema2/input_valgrind
+==88271== Parent PID: 88270
+==88271== 
+--88271-- 
+--88271-- Valgrind options:
+--88271--    --leak-check=full
+--88271--    --show-leak-kinds=all
+--88271--    --track-origins=yes
+--88271--    --log-file=neopt.memory
+--88271--    --verbose
+--88271-- Contents of /proc/version:
+--88271--   Linux version 3.10.0-1062.9.1.el7.x86_64 (mockbuild@kbuilder.bsys.centos.org) (gcc version 4.8.5 20150623 (Red Hat 4.8.5-39) (GCC) ) #1 SMP Fri Dec 6 15:49:49 UTC 2019
+--88271-- 
+--88271-- Arch and hwcaps: AMD64, LittleEndian, amd64-cx16-lzcnt-rdtscp-sse3-avx-avx2-bmi
+--88271-- Page sizes: currently 4096, max supported 4096
+--88271-- Valgrind library directory: /usr/lib64/valgrind
+--88271-- Reading syms from /export/home/acs/stud/g/gabriel.olaru/tema2_asc/skel/tema2_neopt
+--88271-- Reading syms from /usr/lib64/ld-2.17.so
+--88271--   Considering /usr/lib/debug/.build-id/5c/c1a53b747a7e4d21198723c2b633e54f3c06d9.debug ..
+--88271--   .. build-id is valid
+--88271-- Reading syms from /usr/lib64/valgrind/memcheck-amd64-linux
+--88271--    object doesn't have a symbol table
+--88271--    object doesn't have a dynamic symbol table
+--88271-- Scheduler: using generic scheduler lock implementation.
+--88271-- Reading suppressions file: /usr/lib64/valgrind/default.supp
+==88271== embedded gdbserver: reading from /tmp/vgdb-pipe-from-vgdb-to-88271-by-gabriel.olaru-on-fep7-1.grid.pub.ro
+==88271== embedded gdbserver: writing to   /tmp/vgdb-pipe-to-vgdb-from-88271-by-gabriel.olaru-on-fep7-1.grid.pub.ro
+==88271== embedded gdbserver: shared mem   /tmp/vgdb-pipe-shared-mem-vgdb-88271-by-gabriel.olaru-on-fep7-1.grid.pub.ro
+==88271== 
+==88271== TO CONTROL THIS PROCESS USING vgdb (which you probably
+==88271== don't want to do, unless you know exactly what you're doing,
+==88271== or are doing some strange experiment):
+==88271==   /usr/lib64/valgrind/../../bin/vgdb --pid=88271 ...command...
+==88271== 
+==88271== TO DEBUG THIS PROCESS USING GDB: start GDB like this
+==88271==   /path/to/gdb ./tema2_neopt
+==88271== and then give GDB the following command
+==88271==   target remote | /usr/lib64/valgrind/../../bin/vgdb --pid=88271
+==88271== --pid is optional if only one valgrind process is running
+==88271== 
+--88271-- REDIR: 0x4019df0 (ld-linux-x86-64.so.2:strlen) redirected to 0x580c66c5 (???)
+--88271-- REDIR: 0x4019bc0 (ld-linux-x86-64.so.2:index) redirected to 0x580c66df (???)
+--88271-- Reading syms from /usr/lib64/valgrind/vgpreload_core-amd64-linux.so
+--88271-- Reading syms from /usr/lib64/valgrind/vgpreload_memcheck-amd64-linux.so
+==88271== WARNING: new redirection conflicts with existing -- ignoring it
+--88271--     old: 0x04019df0 (strlen              ) R-> (0000.0) 0x580c66c5 ???
+--88271--     new: 0x04019df0 (strlen              ) R-> (2007.0) 0x04c2d0e0 strlen
+--88271-- REDIR: 0x4019d70 (ld-linux-x86-64.so.2:strcmp) redirected to 0x4c2e230 (strcmp)
+--88271-- REDIR: 0x401aa30 (ld-linux-x86-64.so.2:mempcpy) redirected to 0x4c31de0 (mempcpy)
+--88271-- Reading syms from /usr/lib64/libc-2.17.so
+--88271--   Considering /usr/lib/debug/.build-id/39/8944d32cf16a67af51067a326e6c0cc14f90ed.debug ..
+--88271--   .. build-id is valid
+--88271-- REDIR: 0x4ec70e0 (libc.so.6:strcasecmp) redirected to 0x4a247a0 (_vgnU_ifunc_wrapper)
+--88271-- REDIR: 0x4ec3e60 (libc.so.6:strnlen) redirected to 0x4a247a0 (_vgnU_ifunc_wrapper)
+--88271-- REDIR: 0x4ec93b0 (libc.so.6:strncasecmp) redirected to 0x4a247a0 (_vgnU_ifunc_wrapper)
+--88271-- REDIR: 0x4ec68c0 (libc.so.6:memset) redirected to 0x4a247a0 (_vgnU_ifunc_wrapper)
+--88271-- REDIR: 0x4ec6870 (libc.so.6:memcpy@GLIBC_2.2.5) redirected to 0x4a247a0 (_vgnU_ifunc_wrapper)
+--88271-- REDIR: 0x4ec5850 (libc.so.6:__GI_strrchr) redirected to 0x4c2caa0 (__GI_strrchr)
+--88271-- REDIR: 0x4ebca90 (libc.so.6:malloc) redirected to 0x4c29e1c (malloc)
+--88271-- REDIR: 0x4edc8d0 (libc.so.6:__GI_strstr) redirected to 0x4c32070 (__strstr_sse2)
+--88271-- REDIR: 0x4ebceb0 (libc.so.6:free) redirected to 0x4c2af16 (free)
+--88271-- REDIR: 0x4ebd4b0 (libc.so.6:calloc) redirected to 0x4c2bf23 (calloc)
+--88271-- REDIR: 0xffffffffff600000 (???:???) redirected to 0x580c66a7 (???)
+--88271-- REDIR: 0x4ecba80 (libc.so.6:memcpy@@GLIBC_2.14) redirected to 0x4a247a0 (_vgnU_ifunc_wrapper)
+--88271-- REDIR: 0x4f8b9f0 (libc.so.6:__memcpy_ssse3_back) redirected to 0x4c2e6e0 (memcpy@@GLIBC_2.14)
+--88271-- REDIR: 0x4ecd370 (libc.so.6:strchrnul) redirected to 0x4c31900 (strchrnul)
+--88271-- REDIR: 0x4ec6a90 (libc.so.6:__GI_mempcpy) redirected to 0x4c31b10 (__GI_mempcpy)
+--88271-- REDIR: 0x4ecbaf0 (libc.so.6:__GI_memcpy) redirected to 0x4c2eee0 (__GI_memcpy)
+--88271-- REDIR: 0x4ec3d80 (libc.so.6:__GI_strlen) redirected to 0x4c2d040 (__GI_strlen)
+--88271-- REDIR: 0x4ec22e0 (libc.so.6:strcmp) redirected to 0x4a247a0 (_vgnU_ifunc_wrapper)
+--88271-- REDIR: 0x4f75d40 (libc.so.6:__strcmp_sse42) redirected to 0x4c2e1e0 (__strcmp_sse42)
+==88271== 
+==88271== HEAP SUMMARY:
+==88271==     in use at exit: 0 bytes in 0 blocks
+==88271==   total heap usage: 8 allocs, 8 frees, 7,680,676 bytes allocated
+==88271== 
+==88271== All heap blocks were freed -- no leaks are possible
+==88271== 
+==88271== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==88271== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)

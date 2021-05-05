@@ -1,0 +1,107 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+BUFSIZE	sol/lin/3-mcat/mcat.c	20;"	d	file:
+BUFSIZE	sol/win/1-cat/cat.c	19;"	d	file:
+BUFSIZE	sol/win/2-crc/crc.c	21;"	d	file:
+BUFSIZE	sol/win/4-trouble/trouble.c	19;"	d	file:
+CC	sol/lin/1-redirect/Makefile	/^CC = gcc$/;"	m
+CC	sol/lin/2-lseek/Makefile	/^CC = gcc$/;"	m
+CC	sol/lin/3-mcat/Makefile	/^CC = gcc$/;"	m
+CC	sol/lin/4-trouble/Makefile	/^CC = gcc$/;"	m
+CC	sol/lin/5-singular/Makefile	/^CC = gcc$/;"	m
+CC	sol/win/1-cat/Makefile	/^CC = cl$/;"	m
+CC	sol/win/2-crc/Makefile	/^CC = cl$/;"	m
+CC	sol/win/3-ls/Makefile	/^CC = cl$/;"	m
+CC	sol/win/4-trouble/Makefile	/^CC = cl$/;"	m
+CFLAGS	sol/lin/1-redirect/Makefile	/^CFLAGS = -Wall -Wextra -g$/;"	m
+CFLAGS	sol/lin/2-lseek/Makefile	/^CFLAGS = -Wall -Wextra -g$/;"	m
+CFLAGS	sol/lin/3-mcat/Makefile	/^CFLAGS = -Wall -Wextra -g$/;"	m
+CFLAGS	sol/lin/4-trouble/Makefile	/^CFLAGS = -Wall -Wextra -g$/;"	m
+CFLAGS	sol/lin/5-singular/Makefile	/^CFLAGS = -Wall -Wextra -g$/;"	m
+CFLAGS	sol/win/1-cat/Makefile	/^CFLAGS = \/W3 \/nologo \/I..\\utils$/;"	m
+CFLAGS	sol/win/2-crc/Makefile	/^CFLAGS = \/c \/W3 \/nologo \/I..\\utils \/I.$/;"	m
+CFLAGS	sol/win/3-ls/Makefile	/^CFLAGS = \/W3 \/nologo \/I..\\utils$/;"	m
+CFLAGS	sol/win/4-trouble/Makefile	/^CFLAGS = \/W3 \/nologo \/I..\\utils$/;"	m
+CHUNKSIZE	sol/win/2-crc/crc.c	22;"	d	file:
+CPPFLAGS	sol/lin/1-redirect/Makefile	/^CPPFLAGS = -I..\/utils$/;"	m
+CPPFLAGS	sol/lin/2-lseek/Makefile	/^CPPFLAGS = -I..\/utils$/;"	m
+CPPFLAGS	sol/lin/3-mcat/Makefile	/^CPPFLAGS = -I..\/utils$/;"	m
+CPPFLAGS	sol/lin/4-trouble/Makefile	/^CPPFLAGS = -I..\/utils$/;"	m
+CPPFLAGS	sol/lin/5-singular/Makefile	/^CPPFLAGS = -I..\/utils$/;"	m
+CRC32_H__	sol/win/2-crc/crc32.h	2;"	d
+CompareFiles	sol/win/2-crc/crc.c	/^static BOOL CompareFiles(CHAR *file1, CHAR *file2)$/;"	f	file:
+DIE	sol/lin/utils/utils.h	15;"	d
+DIE	sol/win/utils/utils.h	15;"	d
+DO1	sol/win/2-crc/crc32.c	86;"	d	file:
+DO2	sol/win/2-crc/crc32.c	90;"	d	file:
+DO4	sol/win/2-crc/crc32.c	94;"	d	file:
+DO8	sol/win/2-crc/crc32.c	98;"	d	file:
+FILE_MAX_SIZE	sol/lin/nasty/nasty.c	22;"	d	file:
+GenerateCrc	sol/win/2-crc/crc.c	/^static void GenerateCrc(CHAR *sourceFile, CHAR *destFile)$/;"	f	file:
+GetSize	sol/win/2-crc/crc.c	/^static DWORD GetSize(HANDLE file)$/;"	f	file:
+KDIR	sol/lin/nasty/Makefile	/^KDIR=\/lib\/modules\/`uname -r`\/build$/;"	m
+L	sol/win/1-cat/Makefile	/^L = link$/;"	m
+L	sol/win/2-crc/Makefile	/^L = link$/;"	m
+L	sol/win/3-ls/Makefile	/^L = link$/;"	m
+L	sol/win/4-trouble/Makefile	/^L = link$/;"	m
+LIN_UTILS_H_	sol/lin/utils/utils.h	9;"	d
+LOCK_FILE	sol/lin/5-singular/singular.c	21;"	d	file:
+ListFiles	sol/win/3-ls/ls.c	/^static void ListFiles(TCHAR *path, BOOL bRecursive, BOOL bAll)$/;"	f	file:
+MAXPATH	sol/win/3-ls/ls.c	22;"	d	file:
+MAX_CHUNK_SIZE	sol/lin/nasty/nasty.c	23;"	d	file:
+MAX_FILE_NAME	sol/win/3-ls/ls.c	25;"	d	file:
+NAME	sol/lin/nasty/Makefile	/^NAME=nasty$/;"	m
+NASTY_DRIVER_NAME	sol/lin/nasty/nasty.c	21;"	d	file:
+NASTY_DRIVER_VERSION	sol/lin/nasty/nasty.c	/^MODULE_VERSION(NASTY_DRIVER_VERSION);$/;"	v
+NASTY_DRIVER_VERSION	sol/lin/nasty/nasty.c	20;"	d	file:
+NULL	sol/win/2-crc/crc32.c	103;"	d	file:
+PrintFileTime	sol/win/3-ls/ls.c	/^static void PrintFileTime(FILETIME fTime)$/;"	f	file:
+PrintLastError	sol/win/utils/utils.h	/^static VOID PrintLastError(const PCHAR message)$/;"	f
+PrintPadding	sol/win/3-ls/ls.c	/^static void PrintPadding(DWORD count)$/;"	f	file:
+PrintUsage	sol/win/3-ls/ls.c	/^static void PrintUsage(char *program)$/;"	f	file:
+ReadChunk	sol/win/2-crc/crc.c	/^static DWORD ReadChunk(CHAR *chunk, HANDLE hFile)$/;"	f	file:
+UNICODE	sol/win/1-cat/cat.c	12;"	d	file:
+UNICODE	sol/win/2-crc/crc.c	12;"	d	file:
+UNICODE	sol/win/3-ls/ls.c	15;"	d	file:
+UNICODE	sol/win/4-trouble/trouble.c	12;"	d	file:
+WIN_UTILS_H_	sol/win/utils/utils.h	9;"	d
+WriteCrc	sol/win/2-crc/crc.c	/^static void WriteCrc(int crc, HANDLE hWrite)$/;"	f	file:
+XFILE_UTIL_H	sol/lin/3-mcat/xfile.h	11;"	d
+_UNICODE	sol/win/1-cat/cat.c	11;"	d	file:
+_UNICODE	sol/win/2-crc/crc.c	11;"	d	file:
+_UNICODE	sol/win/3-ls/ls.c	14;"	d	file:
+_UNICODE	sol/win/4-trouble/trouble.c	11;"	d	file:
+check_lock	sol/lin/5-singular/singular.c	/^static void check_lock(void)$/;"	f	file:
+clean_up	sol/lin/5-singular/singular.c	/^static void clean_up(void)$/;"	f	file:
+content	sol/lin/nasty/nasty.c	/^char content[FILE_MAX_SIZE] = "\\n"$/;"	v
+crc_table	sol/win/2-crc/crc32.c	/^static const unsigned long crc_table[256] = {$/;"	v	file:
+crt_size	sol/lin/nasty/nasty.c	/^int crt_size = FILE_MAX_SIZE; \/* file's current size *\/$/;"	v
+do_stuff	sol/lin/5-singular/singular.c	/^static void do_stuff(void)$/;"	f	file:
+fdlock	sol/lin/5-singular/singular.c	/^static int fdlock = -1;$/;"	v	file:
+main	sol/lin/1-redirect/redirect.c	/^int main(void)$/;"	f
+main	sol/lin/2-lseek/lseek.c	/^int main(void)$/;"	f
+main	sol/lin/3-mcat/mcat.c	/^int main(int argc, char **argv)$/;"	f
+main	sol/lin/4-trouble/trouble.c	/^int main(void)$/;"	f
+main	sol/lin/5-singular/singular.c	/^int main(void)$/;"	f
+main	sol/win/1-cat/cat.c	/^int main(int argc, char *argv[])$/;"	f
+main	sol/win/2-crc/crc.c	/^int main(int argc, char *argv[])$/;"	f
+main	sol/win/3-ls/ls.c	/^int main(int argc, char *argv[])$/;"	f
+main	sol/win/4-trouble/trouble.c	/^int main(int argc, char *argv[])$/;"	f
+nasty_close	sol/lin/nasty/nasty.c	/^static int nasty_close(struct inode *inode, struct file *file)$/;"	f	file:
+nasty_device	sol/lin/nasty/nasty.c	/^static struct miscdevice nasty_device = {$/;"	v	typeref:struct:miscdevice	file:
+nasty_exit	sol/lin/nasty/nasty.c	/^module_exit(nasty_exit);$/;"	v
+nasty_exit	sol/lin/nasty/nasty.c	/^static void __exit nasty_exit(void)$/;"	f	file:
+nasty_fops	sol/lin/nasty/nasty.c	/^static const struct file_operations nasty_fops = {$/;"	v	typeref:struct:file_operations	file:
+nasty_init	sol/lin/nasty/nasty.c	/^module_init(nasty_init);$/;"	v
+nasty_init	sol/lin/nasty/nasty.c	/^static int __init nasty_init(void)$/;"	f	file:
+nasty_open	sol/lin/nasty/nasty.c	/^static int nasty_open(struct inode *inode, struct file *file)$/;"	f	file:
+nasty_read	sol/lin/nasty/nasty.c	/^static ssize_t nasty_read(struct file *file, char __user *buf, size_t count,$/;"	f	file:
+nasty_write	sol/lin/nasty/nasty.c	/^static ssize_t nasty_write(struct file *file, const char __user *buf,$/;"	f	file:
+update_crc	sol/win/2-crc/crc32.c	/^unsigned long update_crc(unsigned long crc,$/;"	f
+wait_for_input	sol/lin/1-redirect/redirect.c	/^static void wait_for_input(const char *msg)$/;"	f	file:
+xread	sol/lin/3-mcat/xfile.c	/^ssize_t xread(int fd, void *buf, size_t count)$/;"	f
+xwrite	sol/lin/3-mcat/xfile.c	/^ssize_t xwrite(int fd, const void *buf, size_t count)$/;"	f
